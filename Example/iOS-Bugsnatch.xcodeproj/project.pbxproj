@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		15E00B9D26196AA5E3BF18E0 /* Pods_iOS_Bugsnatch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3480DB1CEDE4303E3DF9C20D /* Pods-iOS-Bugsnatch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Bugsnatch_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Bugsnatch_Example/Pods-iOS-Bugsnatch_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4F693D65FE189054757F95CA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4F693D65FE189054757F95CA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* iOS-Bugsnatch_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Bugsnatch_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,11 +41,11 @@
 		607FACE51AFB9204008FA782 /* iOS-Bugsnatch_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-Bugsnatch_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6AC5273A5797738F95A40B69 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6AC5273A5797738F95A40B69 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6D6478145EA9492ECC634491 /* Pods-iOS-Bugsnatch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Bugsnatch_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Bugsnatch_Example/Pods-iOS-Bugsnatch_Example.release.xcconfig"; sourceTree = "<group>"; };
 		97A4DDEDAD0125F0231E1962 /* Pods_iOS_Bugsnatch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C2FD229112F41B74F6A4EC /* Pods-iOS-Bugsnatch_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Bugsnatch_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Bugsnatch_Tests/Pods-iOS-Bugsnatch_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B3E3398E8D6AAB716D3C7233 /* iOS-Bugsnatch.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "iOS-Bugsnatch.podspec"; path = "../iOS-Bugsnatch.podspec"; sourceTree = "<group>"; };
+		B3E3398E8D6AAB716D3C7233 /* iOS-Bugsnatch.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "iOS-Bugsnatch.podspec"; path = "../iOS-Bugsnatch.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BC312042B6ED3A86221BF5F9 /* Pods-iOS-Bugsnatch_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Bugsnatch_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Bugsnatch_Tests/Pods-iOS-Bugsnatch_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -269,15 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-iOS-Bugsnatch_Tests-checkManifestLockResult.txt",
 			);
@@ -291,15 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-Bugsnatch_Example/Pods-iOS-Bugsnatch_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/iOS-Bugsnatch/iOS_Bugsnatch.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOS_Bugsnatch.framework",
 			);
@@ -313,13 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,15 +320,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-iOS-Bugsnatch_Example-checkManifestLockResult.txt",
 			);
@@ -354,13 +338,9 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,13 +353,9 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

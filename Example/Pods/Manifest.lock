@@ -1,0 +1,16 @@
+PODS:
+  - iOS-Bugsnatch (0.1.0)
+
+DEPENDENCIES:
+  - iOS-Bugsnatch (from `../`)
+
+EXTERNAL SOURCES:
+  iOS-Bugsnatch:
+    :path: ../
+
+SPEC CHECKSUMS:
+  iOS-Bugsnatch: af526bfb75cee3a22971bc18b41e57327f057b3c
+
+PODFILE CHECKSUM: 7114846d4f697e94e21bcf2e88668181db5e6d38
+
+COCOAPODS: 1.4.0
