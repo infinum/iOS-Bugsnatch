@@ -1,5 +1,5 @@
 import XCTest
-import iOS-Bugsnatch
+import iOS_Bugsnatch
 
 class Tests: XCTestCase {
     
