@@ -12,4 +12,13 @@ public final class Bugsnatch {
     private init() {}
 
     public static let shared = Bugsnatch()
+
+    public static var debugInfo: String {
+        var info = ApplicationInfo.appInfo
+
+        let deviceInfo = "Device: \(UIDevice.modelName)"
+        info = info.appending(deviceInfo)
+
+        return info
+    }
 }
