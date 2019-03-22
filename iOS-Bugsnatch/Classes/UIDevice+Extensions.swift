@@ -1,5 +1,5 @@
 //
-//  DeviceInfo.swift
+//  UIDevice+Extensions.swift
 //  iOS-Bugsnatch
 //
 //  Created by Damjan Dabo on 22/03/2019.
