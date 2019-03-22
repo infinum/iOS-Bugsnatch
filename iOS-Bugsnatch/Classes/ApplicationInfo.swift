@@ -37,6 +37,11 @@ public struct ApplicationInfo {
             appInfo = appInfo.appending(appNameRow)
         }
 
+        if let bundleId = ApplicationInfo.bundleId {
+            let bundleIdRow = "Bundle ID: \(bundleId)\n"
+            appInfo = appInfo.appending(bundleIdRow)
+        }
+
         if let version = ApplicationInfo.version {
             let versionRow = "Version: \(version)\n"
             appInfo = appInfo.appending(versionRow)
