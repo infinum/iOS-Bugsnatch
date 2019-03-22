@@ -13,7 +13,7 @@
 		54B0115DB052B648F989D735C6080683 /* Pods-iOS-Bugsnatch_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A6054E7A07BEA3040A890198D2BF9D /* Pods-iOS-Bugsnatch_Tests-dummy.m */; };
 		77CC1FBAB779A9B1FE4924107725BBB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		AA9FBB14EE496758B95F427EEAE714BF /* Pods-iOS-Bugsnatch_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84ECE4630D88FACA4E0A9D67C07267F2 /* Pods-iOS-Bugsnatch_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7DF7EF6A362CDCC7856FB5198155CC0 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D2493EC0630A349495A6EA4249F3D /* ReplaceMe.swift */; };
+		AD1C9AAF2245237F00B41B46 /* ApplicationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C9AAE2245237F00B41B46 /* ApplicationInfo.swift */; };
 		C13D1B51E80548E1BBB0AB7C346A6742 /* iOS-Bugsnatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B2BDCE5F45FB153769E4F24913FE7 /* iOS-Bugsnatch-dummy.m */; };
 		DFD85FB0FBE7CF5409AEBF7093C6AD9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		FD29D30EB3A02492A48EC320C693D2C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -39,32 +39,32 @@
 		2FE6A20A3DF287DE2B79E6870B2525CB /* Pods-iOS-Bugsnatch_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		47E03F52379F8B2CF17C96F79CDE8F4B /* Pods-iOS-Bugsnatch_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOS-Bugsnatch_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4C7AAC533DB48480835EF783086046F9 /* Pods-iOS-Bugsnatch_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOS-Bugsnatch_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4E03D2D30480DA40FA8D1F4B5CBEF738 /* iOS-Bugsnatch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = "iOS-Bugsnatch.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5855177C73E420AA204D235A648112F2 /* iOS_Bugsnatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iOS_Bugsnatch.framework; path = "iOS-Bugsnatch.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E03D2D30480DA40FA8D1F4B5CBEF738 /* iOS-Bugsnatch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = "iOS-Bugsnatch.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5855177C73E420AA204D235A648112F2 /* iOS_Bugsnatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_Bugsnatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5EFE62D4FE9E237D8C11EC026077360F /* Pods-iOS-Bugsnatch_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-Bugsnatch_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		611105C1CAD73B6B5D41AA9FF8B79AF3 /* Pods-iOS-Bugsnatch_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		68C14EE4E084AF5A7F85D533343461D5 /* Pods-iOS-Bugsnatch_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOS-Bugsnatch_Example-umbrella.h"; sourceTree = "<group>"; };
 		6C21B017B258A83C073F477660064DAB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FEB76990289B206C88BC01A51F4D481 /* Pods_iOS_Bugsnatch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iOS_Bugsnatch_Tests.framework; path = "Pods-iOS-Bugsnatch_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FEB76990289B206C88BC01A51F4D481 /* Pods_iOS_Bugsnatch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		705E95413034D6E8D1D23D7F9546F0C6 /* Pods-iOS-Bugsnatch_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iOS-Bugsnatch_Example.modulemap"; sourceTree = "<group>"; };
-		81223E6EC27A8003344CE40138BA1A79 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		81223E6EC27A8003344CE40138BA1A79 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84ECE4630D88FACA4E0A9D67C07267F2 /* Pods-iOS-Bugsnatch_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOS-Bugsnatch_Tests-umbrella.h"; sourceTree = "<group>"; };
 		90F31C0841A20A075FFC2A12A454E69B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		945D2493EC0630A349495A6EA4249F3D /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = "iOS-Bugsnatch/Classes/ReplaceMe.swift"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9859FDCB3A497522BED7556676DED0F0 /* Pods-iOS-Bugsnatch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9A6E1C2571885445F30158EB6539441F /* Pods-iOS-Bugsnatch_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOS-Bugsnatch_Example-dummy.m"; sourceTree = "<group>"; };
 		9F8274B289611E039DDBDD36A4D26D61 /* Pods-iOS-Bugsnatch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A19B93029614A64809390921944B3623 /* iOS-Bugsnatch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Bugsnatch-prefix.pch"; sourceTree = "<group>"; };
-		AFA4199902E194111A08CB4859F8DCDA /* Pods_iOS_Bugsnatch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iOS_Bugsnatch_Example.framework; path = "Pods-iOS-Bugsnatch_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1C9AAE2245237F00B41B46 /* ApplicationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApplicationInfo.swift; path = "iOS-Bugsnatch/Classes/ApplicationInfo.swift"; sourceTree = "<group>"; };
+		AFA4199902E194111A08CB4859F8DCDA /* Pods_iOS_Bugsnatch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04D7DE077ADAD341B4C000D528116FD /* Pods-iOS-Bugsnatch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS-Bugsnatch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BCD67E81E894B46C0B41FE389839A687 /* Pods-iOS-Bugsnatch_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-Bugsnatch_Tests-resources.sh"; sourceTree = "<group>"; };
 		C5E7D3BBD08FF777C0DE82E5F9E6350A /* iOS-Bugsnatch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "iOS-Bugsnatch.modulemap"; sourceTree = "<group>"; };
 		D41426522125E4E474B2848C8A3FB687 /* Pods-iOS-Bugsnatch_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iOS-Bugsnatch_Tests.modulemap"; sourceTree = "<group>"; };
 		EEC830ACBF1F8600E19FC04517F059A3 /* iOS-Bugsnatch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Bugsnatch-umbrella.h"; sourceTree = "<group>"; };
 		F91B2BDCE5F45FB153769E4F24913FE7 /* iOS-Bugsnatch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOS-Bugsnatch-dummy.m"; sourceTree = "<group>"; };
-		FCA782A4F8D37FDE451EF8383AED100D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		FCA782A4F8D37FDE451EF8383AED100D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,9 +172,9 @@
 		A1F83046F2A25BE21A61773F48568AA0 /* iOS-Bugsnatch */ = {
 			isa = PBXGroup;
 			children = (
-				945D2493EC0630A349495A6EA4249F3D /* ReplaceMe.swift */,
 				C7943F5789186FF0EE696DE2ABEA05AC /* Pod */,
 				F236B2C84A430F3E844042F42D3CEA6F /* Support Files */,
+				AD1C9AAE2245237F00B41B46 /* ApplicationInfo.swift */,
 			);
 			name = "iOS-Bugsnatch";
 			path = ../..;
@@ -313,6 +313,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					4262EAE71FE5386CEDC50A8C05910A24 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -362,8 +367,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1C9AAF2245237F00B41B46 /* ApplicationInfo.swift in Sources */,
 				C13D1B51E80548E1BBB0AB7C346A6742 /* iOS-Bugsnatch-dummy.m in Sources */,
-				B7DF7EF6A362CDCC7856FB5198155CC0 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D40A80BE007E31F0E41B107D5E98E52 /* iOS-Bugsnatch.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -418,8 +424,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -464,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D40A80BE007E31F0E41B107D5E98E52 /* iOS-Bugsnatch.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -707,8 +713,7 @@
 				PRODUCT_NAME = Pods_iOS_Bugsnatch_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
