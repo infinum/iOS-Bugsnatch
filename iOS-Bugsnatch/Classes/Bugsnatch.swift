@@ -13,14 +13,50 @@ public final class Bugsnatch {
 
     public static let shared = Bugsnatch()
 
-    public static var debugInfo: String {
+    private var _config: BugsnatchConfig?
+
+    public func setup(config: BugsnatchConfig) {
+        _config = config
+    }
+
+    public var debugInfo: String {
         var info = ApplicationInfo.appInfo
 
-        let deviceNameRow = "Device: \(UIDevice.modelName)\n"
-        let systemVersionRow = "OS: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)\n"
+        info = info.appending(_deviceNameRow).appending(_systemVersionRow)
 
-        info = info.appending(deviceNameRow).appending(systemVersionRow)
+        if _config?.shouldShowDeviceOrientation == true {
+            info.append(_deviceOrientationRow)
+        }
 
         return info
+    }
+
+    // MARK: - Private
+
+    private var _deviceNameRow: String {
+        return "Device: \(UIDevice.modelName)\n"
+    }
+
+    private var _systemVersionRow: String {
+        return "OS: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)\n"
+    }
+
+    private var _deviceOrientationRow: String {
+        return "Device orientation: \(_deviceOrientation)\n"
+    }
+
+    private var _deviceOrientation: String {
+        switch UIApplication.shared.statusBarOrientation {
+        case .unknown:
+            return "unknown"
+        case .portrait:
+            return "portrait"
+        case .portraitUpsideDown:
+            return "portraitUpsideDown"
+        case .landscapeLeft:
+            return "landscapeLeft"
+        case .landscapeRight:
+            return "landscapeRight"
+        }
     }
 }
