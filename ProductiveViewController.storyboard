@@ -35,7 +35,7 @@
                         <constraints>
                             <constraint firstItem="chi-BS-jOA" firstAttribute="leading" secondItem="13r-rh-R7s" secondAttribute="leading" id="HlI-7M-jqQ"/>
                             <constraint firstItem="AXV-he-pKM" firstAttribute="top" secondItem="13r-rh-R7s" secondAttribute="top" id="ID7-0L-MC0"/>
-                            <constraint firstItem="13r-rh-R7s" firstAttribute="bottom" secondItem="chi-BS-jOA" secondAttribute="bottom" id="WFI-kL-cQC"/>
+                            <constraint firstAttribute="bottom" secondItem="chi-BS-jOA" secondAttribute="bottom" id="WFI-kL-cQC"/>
                             <constraint firstItem="13r-rh-R7s" firstAttribute="trailing" secondItem="chi-BS-jOA" secondAttribute="trailing" id="nIe-dG-JMM"/>
                             <constraint firstItem="AXV-he-pKM" firstAttribute="leading" secondItem="13r-rh-R7s" secondAttribute="leading" constant="16" id="qRU-nh-kp7"/>
                             <constraint firstItem="chi-BS-jOA" firstAttribute="top" secondItem="AXV-he-pKM" secondAttribute="bottom" id="xVp-KR-KHc"/>

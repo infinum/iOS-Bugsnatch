@@ -69,12 +69,20 @@ class ProductiveViewController: UIViewController {
         configuration.preferences = preferences
         configuration.userContentController = contentController
 
-        let webview = WKWebView(frame: webViewContainer.frame, configuration: configuration)
-        webview.navigationDelegate = self
-        webViewContainer.addSubview(webview)
+        let customFrame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 0.0, height: self.webViewContainer.frame.size.height))
+        let webView = WKWebView(frame: customFrame, configuration: configuration)
+        webView.navigationDelegate = self
 
-        webview.load(URLRequest(url: url))
-        webview.allowsBackForwardNavigationGestures = true
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        webViewContainer.addSubview(webView)
+        webView.topAnchor.constraint(equalTo: webViewContainer.topAnchor).isActive = true
+        webView.rightAnchor.constraint(equalTo: webViewContainer.rightAnchor).isActive = true
+        webView.leftAnchor.constraint(equalTo: webViewContainer.leftAnchor).isActive = true
+        webView.bottomAnchor.constraint(equalTo: webViewContainer.bottomAnchor).isActive = true
+        webView.heightAnchor.constraint(equalTo: webViewContainer.heightAnchor).isActive = true
+
+        webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
     }
 
     // MARK: - IBActions -
