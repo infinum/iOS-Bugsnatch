@@ -65,6 +65,11 @@ public final class Bugsnatch {
             return "landscapeRight"
         }
     }
+
+    private func _saveScreenshotIfNeeded() {
+        guard _config?.triggerType != .screenshot else { return }
+        ScreenshotTaker.saveScreenshot()
+    }
 }
 
 extension Bugsnatch: TriggerDelegate {
@@ -72,5 +77,6 @@ extension Bugsnatch: TriggerDelegate {
     func didTrigger() {
         // TODO: - do expected action -
         print(Bugsnatch.shared.debugInfo)
+        _saveScreenshotIfNeeded()
     }
 }

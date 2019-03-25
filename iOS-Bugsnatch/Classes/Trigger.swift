@@ -53,3 +53,17 @@ public class Trigger {
         // TODO: - implement -
     }
 }
+
+extension Trigger.TriggerType: Equatable {
+
+    public static func == (lhs: Trigger.TriggerType, rhs: Trigger.TriggerType) -> Bool {
+        switch (lhs, rhs) {
+        case (.screenshot, .screenshot):
+            return true
+        case (.shakeGesture, .shakeGesture):
+            return true
+        default:
+            return false
+        }
+    }
+}
