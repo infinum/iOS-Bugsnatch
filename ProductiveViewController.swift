@@ -37,25 +37,27 @@ class ProductiveViewController: UIViewController {
         let url = URL(string: "https://app.productive.io/\(organizationId)/projects/\(projectId)/tasks/boards/\(boardId)/new-task")!
 
         let scriptSource = """
-        function checkDOMChange() {
-            let editor = document.getElementsByClassName(`trix-editor`)[0];
+        var timeout;
 
-            if (typeof(editor) != 'undefined' && editor != null) {
-                populateBugText(editor);
+        function checkDOMChange() {
+            let editorEl = document.querySelector(`.modal-container trix-editor`);
+
+            if (editorEl && editorEl.editor) {
+                populateBugText(editorEl.editor);
             } else {
-                setTimeout(checkDOMChange, 100);
+                timeout = setTimeout(checkDOMChange, 200);
             }
         }
 
         checkDOMChange();
 
         function populateBugText(editor) {
-            editor.value = `\(exampleBugText)`;
+            editor.insertString(`\(exampleBugText)`);
         }
         """
 
         print(scriptSource)
-        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: false)
+        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
 
         let contentController = WKUserContentController()
         contentController.addUserScript(script)
