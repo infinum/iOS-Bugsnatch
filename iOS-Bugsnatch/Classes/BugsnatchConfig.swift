@@ -7,11 +7,13 @@
 
 import Foundation
 
-public struct BugsnatchConfig {
+public class BugsnatchConfig {
 
     public let shouldShowDeviceOrientation: Bool
+    public let triggerType: Trigger.TriggerType
 
-    public init(shouldShowDeviceOrientation: Bool) {
+    public init(shouldShowDeviceOrientation: Bool, triggerType: Trigger.TriggerType = .screenshot) {
         self.shouldShowDeviceOrientation = shouldShowDeviceOrientation
+        self.triggerType = triggerType
     }
 }

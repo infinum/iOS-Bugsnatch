@@ -17,6 +17,7 @@
 		AD1C9AB12245242A00B41B46 /* Bugsnatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C9AB02245242A00B41B46 /* Bugsnatch.swift */; };
 		AD1C9AB922452EC600B41B46 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C9AB822452EC600B41B46 /* UIDevice+Extensions.swift */; };
 		AD1C9ABB224531B100B41B46 /* BugsnatchConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C9ABA224531B100B41B46 /* BugsnatchConfig.swift */; };
+		AD1C9ABD2248D57900B41B46 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C9ABC2248D57900B41B46 /* Trigger.swift */; };
 		C13D1B51E80548E1BBB0AB7C346A6742 /* iOS-Bugsnatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B2BDCE5F45FB153769E4F24913FE7 /* iOS-Bugsnatch-dummy.m */; };
 		DFD85FB0FBE7CF5409AEBF7093C6AD9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		FD29D30EB3A02492A48EC320C693D2C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -63,6 +64,7 @@
 		AD1C9AB02245242A00B41B46 /* Bugsnatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bugsnatch.swift; path = "iOS-Bugsnatch/Classes/Bugsnatch.swift"; sourceTree = "<group>"; };
 		AD1C9AB822452EC600B41B46 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extensions.swift"; path = "iOS-Bugsnatch/Classes/UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		AD1C9ABA224531B100B41B46 /* BugsnatchConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BugsnatchConfig.swift; path = "iOS-Bugsnatch/Classes/BugsnatchConfig.swift"; sourceTree = "<group>"; };
+		AD1C9ABC2248D57900B41B46 /* Trigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Trigger.swift; path = "iOS-Bugsnatch/Classes/Trigger.swift"; sourceTree = "<group>"; };
 		AFA4199902E194111A08CB4859F8DCDA /* Pods_iOS_Bugsnatch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04D7DE077ADAD341B4C000D528116FD /* Pods-iOS-Bugsnatch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS-Bugsnatch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BCD67E81E894B46C0B41FE389839A687 /* Pods-iOS-Bugsnatch_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-Bugsnatch_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				AD1C9AB02245242A00B41B46 /* Bugsnatch.swift */,
 				AD1C9AB822452EC600B41B46 /* UIDevice+Extensions.swift */,
 				AD1C9ABA224531B100B41B46 /* BugsnatchConfig.swift */,
+				AD1C9ABC2248D57900B41B46 /* Trigger.swift */,
 			);
 			name = "iOS-Bugsnatch";
 			path = ../..;
@@ -380,6 +383,7 @@
 				AD1C9AAF2245237F00B41B46 /* ApplicationInfo.swift in Sources */,
 				AD1C9AB922452EC600B41B46 /* UIDevice+Extensions.swift in Sources */,
 				AD1C9AB12245242A00B41B46 /* Bugsnatch.swift in Sources */,
+				AD1C9ABD2248D57900B41B46 /* Trigger.swift in Sources */,
 				C13D1B51E80548E1BBB0AB7C346A6742 /* iOS-Bugsnatch-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

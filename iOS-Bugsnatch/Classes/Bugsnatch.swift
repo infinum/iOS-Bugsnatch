@@ -14,9 +14,11 @@ public final class Bugsnatch {
     public static let shared = Bugsnatch()
 
     private var _config: BugsnatchConfig?
+    private var _trigger: Trigger?
 
     public func setup(config: BugsnatchConfig) {
         _config = config
+        _setupTrigger()
     }
 
     public var debugInfo: String {
@@ -32,6 +34,10 @@ public final class Bugsnatch {
     }
 
     // MARK: - Private
+
+    private func _setupTrigger() {
+        _trigger = Trigger(type: _config?.triggerType, delegate: self)
+    }
 
     private var _deviceNameRow: String {
         return "Device: \(UIDevice.modelName)\n"
@@ -58,5 +64,13 @@ public final class Bugsnatch {
         case .landscapeRight:
             return "landscapeRight"
         }
+    }
+}
+
+extension Bugsnatch: TriggerDelegate {
+
+    func didTrigger() {
+        // TODO: - do expected action -
+        print(Bugsnatch.shared.debugInfo)
     }
 }
