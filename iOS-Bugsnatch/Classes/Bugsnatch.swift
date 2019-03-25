@@ -23,7 +23,6 @@ public final class Bugsnatch {
 
     public var debugInfo: String {
         var info = ApplicationInfo.appInfo
-
         info = info.appending(_deviceNameRow).appending(_systemVersionRow)
 
         if _config?.shouldShowDeviceOrientation == true {
@@ -78,5 +77,6 @@ extension Bugsnatch: TriggerDelegate {
         // TODO: - do expected action -
         print(Bugsnatch.shared.debugInfo)
         _saveScreenshotIfNeeded()
+        ProductiveViewController.present()
     }
 }
