@@ -75,7 +75,7 @@ extension Bugsnatch: TriggerDelegate {
 
     func didTrigger() {
         // TODO: - do expected action -
-        print(Bugsnatch.shared.debugInfo)
+        print(debugInfo)
         _saveScreenshotIfNeeded()
         ProductiveViewController.present()
     }

@@ -10,54 +10,44 @@ import WebKit
 
 class ProductiveViewController: UIViewController {
 
+    // MARK: - IBOutlets -
+
     @IBOutlet weak var webViewContainer: UIView!
+
+    // MARK: - Public properties -
+
+    static let identifier = "ProductiveViewController"
+
+    // MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
         _setupWebView()
     }
 
-    static let identifier = "ProductiveViewController"
-
     static func present() {
         let bugsnatchBundle = Bundle(for: ProductiveViewController.self)
         let storyboard = UIStoryboard(name: identifier, bundle: bugsnatchBundle)
         let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
-        UIApplication.shared.keyWindow?.rootViewController?.presentViewControllerFromVisibleViewController(viewControllerToPresent: viewController, animated: true)
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        rootViewController?.presentViewControllerFromVisibleViewController(viewControllerToPresent: viewController, animated: true)
     }
 
-    // MARK: - Private -
+    // MARK: - IBActions -
+
+    @IBAction func closeButtonActionHandler(_ sender: Any) {
+        dismiss(animated: true)
+    }
+
+    // MARK: - Private methods -
 
     private func _setupWebView() {
-        let exampleBugText = "This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok. This bug is not ok."
-
         let organizationId = "1-infinum"
         let projectId = 1116
         let boardId = 603
         let url = URL(string: "https://app.productive.io/\(organizationId)/projects/\(projectId)/tasks/boards/\(boardId)/new-task")!
 
-        let scriptSource = """
-        var timeout;
-
-        function checkDOMChange() {
-            let editorEl = document.querySelector(`.modal-container trix-editor`);
-
-            if (editorEl && editorEl.editor) {
-                populateBugText(editorEl.editor);
-            } else {
-                timeout = setTimeout(checkDOMChange, 200);
-            }
-        }
-
-        checkDOMChange();
-
-        function populateBugText(editor) {
-            editor.insertString(`\(exampleBugText)`);
-        }
-        """
-
-        print(scriptSource)
-        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        let script = WKUserScript(source: _productiveScriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
 
         let contentController = WKUserContentController()
         contentController.addUserScript(script)
@@ -71,24 +61,33 @@ class ProductiveViewController: UIViewController {
 
         let customFrame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 0.0, height: self.webViewContainer.frame.size.height))
         let webView = WKWebView(frame: customFrame, configuration: configuration)
+
         webView.navigationDelegate = self
-
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        webViewContainer.addSubview(webView)
-        webView.topAnchor.constraint(equalTo: webViewContainer.topAnchor).isActive = true
-        webView.rightAnchor.constraint(equalTo: webViewContainer.rightAnchor).isActive = true
-        webView.leftAnchor.constraint(equalTo: webViewContainer.leftAnchor).isActive = true
-        webView.bottomAnchor.constraint(equalTo: webViewContainer.bottomAnchor).isActive = true
-        webView.heightAnchor.constraint(equalTo: webViewContainer.heightAnchor).isActive = true
-
+        webView.embed(in: webViewContainer)
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }
 
-    // MARK: - IBActions -
+    private var _productiveScriptSource: String {
+        return """
+        var timeout;
 
-    @IBAction func closeButtonActionHandler(_ sender: Any) {
-        dismiss(animated: true)
+        function checkDOMChange() {
+        let editorEl = document.querySelector(`.modal-container trix-editor`);
+
+        if (editorEl && editorEl.editor) {
+        populateBugText(editorEl.editor);
+        } else {
+        timeout = setTimeout(checkDOMChange, 200);
+        }
+        }
+
+        checkDOMChange();
+
+        function populateBugText(editor) {
+        editor.insertString(`\(Bugsnatch.shared.debugInfo)`);
+        }
+        """
     }
 }
 
@@ -97,7 +96,11 @@ extension ProductiveViewController: WKNavigationDelegate {}
 extension UIViewController {
 
     // taken from https://gist.github.com/MartinMoizard/6537467
-    public func presentViewControllerFromVisibleViewController(viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+    public func presentViewControllerFromVisibleViewController(
+        viewControllerToPresent: UIViewController,
+        animated flag: Bool,
+        completion: (() -> Void)? = nil)
+    {
         if let navigationController = self as? UINavigationController, let topViewController = navigationController.topViewController {
             topViewController.presentViewControllerFromVisibleViewController(
                 viewControllerToPresent: viewControllerToPresent,
@@ -113,5 +116,18 @@ extension UIViewController {
         } else {
             present(viewControllerToPresent, animated: true, completion: completion)
         }
+    }
+}
+
+fileprivate extension WKWebView {
+
+    func embed(in containerView: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(self)
+        topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+        rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+        leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
+        heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
     }
 }
