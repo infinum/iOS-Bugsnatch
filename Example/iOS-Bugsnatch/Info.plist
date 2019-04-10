@@ -35,5 +35,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>App needs access to photo library so it can save screenshot.</string>
 </dict>
 </plist>
