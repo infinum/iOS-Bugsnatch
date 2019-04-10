@@ -42,7 +42,7 @@ public class Trigger {
 
     private func _setupScreenshotTrigger() {
         NotificationCenter.default.addObserver(
-            forName: .UIApplicationUserDidTakeScreenshot,
+            forName: UIApplication.userDidTakeScreenshotNotification,
             object: nil,
             queue: .main) { [weak delegate] notification in
                 delegate?.didTrigger()
@@ -51,19 +51,5 @@ public class Trigger {
 
     private func _setupShakeGestureTrigger() {
         // TODO: - implement -
-    }
-}
-
-extension Trigger.TriggerType: Equatable {
-
-    public static func == (lhs: Trigger.TriggerType, rhs: Trigger.TriggerType) -> Bool {
-        switch (lhs, rhs) {
-        case (.screenshot, .screenshot):
-            return true
-        case (.shakeGesture, .shakeGesture):
-            return true
-        default:
-            return false
-        }
     }
 }

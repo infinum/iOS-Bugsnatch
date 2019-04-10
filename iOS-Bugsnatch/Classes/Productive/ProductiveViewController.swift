@@ -16,7 +16,7 @@ class ProductiveViewController: UIViewController {
 
     // MARK: - Public properties -
 
-    static let identifier = "ProductiveViewController"
+    static let identifier = String(describing: ProductiveViewController.self)
 
     // MARK: - Lifecycle -
 
@@ -35,7 +35,7 @@ class ProductiveViewController: UIViewController {
 
     // MARK: - IBActions -
 
-    @IBAction func closeButtonActionHandler(_ sender: Any) {
+    @IBAction private func _closeButtonActionHandler() {
         dismiss(animated: true)
     }
 
@@ -44,10 +44,16 @@ class ProductiveViewController: UIViewController {
     private func _setupWebView() {
         let organizationId = "1-infinum"
         let projectId = 1116
-        let boardId = 603
-        let url = URL(string: "https://app.productive.io/\(organizationId)/projects/\(projectId)/tasks/boards/\(boardId)/new-task")!
 
-        let script = WKUserScript(source: _productiveScriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        guard
+            let url = URL(string: "https://app.productive.io/\(organizationId)/projects/\(projectId)/tasks/new"),
+            let productiveScriptSource = _productiveScriptSource
+        else {
+            // TODO: - show some message -
+            return
+        }
+
+        let script = WKUserScript(source: productiveScriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
 
         let contentController = WKUserContentController()
         contentController.addUserScript(script)
@@ -59,7 +65,7 @@ class ProductiveViewController: UIViewController {
         configuration.preferences = preferences
         configuration.userContentController = contentController
 
-        let customFrame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 0.0, height: self.webViewContainer.frame.size.height))
+        let customFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: 0.0, height: webViewContainer.frame.size.height))
         let webView = WKWebView(frame: customFrame, configuration: configuration)
 
         webView.navigationDelegate = self
@@ -68,26 +74,15 @@ class ProductiveViewController: UIViewController {
         webView.allowsBackForwardNavigationGestures = true
     }
 
-    private var _productiveScriptSource: String {
-        return """
-        var timeout;
+    private var _productiveScriptSource: String? {
+        guard let filepath = Bundle(for: type(of: self)).path(forResource: "productiveScript", ofType: "js") else { return nil }
 
-        function checkDOMChange() {
-        let editorEl = document.querySelector(`.modal-container trix-editor`);
-
-        if (editorEl && editorEl.editor) {
-        populateBugText(editorEl.editor);
-        } else {
-        timeout = setTimeout(checkDOMChange, 200);
+        do {
+            let productiveScript = try String(contentsOfFile: filepath)
+            return String(format: productiveScript, Bugsnatch.shared.debugInfo)
+        } catch {
+            return nil
         }
-        }
-
-        checkDOMChange();
-
-        function populateBugText(editor) {
-        editor.insertString(`\(Bugsnatch.shared.debugInfo)`);
-        }
-        """
     }
 }
 
@@ -124,10 +119,12 @@ fileprivate extension WKWebView {
     func embed(in containerView: UIView) {
         translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(self)
-        topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
-        rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
-        leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
-        heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: containerView.topAnchor),
+            rightAnchor.constraint(equalTo: containerView.rightAnchor),
+            leftAnchor.constraint(equalTo: containerView.leftAnchor),
+            bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            heightAnchor.constraint(equalTo: containerView.heightAnchor)
+        ])
     }
 }

@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
-                                    <action selector="closeButtonActionHandler:" destination="fk8-Zc-m1d" eventType="touchUpInside" id="88p-2a-8jJ"/>
+                                    <action selector="_closeButtonActionHandler" destination="fk8-Zc-m1d" eventType="touchUpInside" id="jky-y6-Q4z"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chi-BS-jOA">

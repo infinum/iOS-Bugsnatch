@@ -22,14 +22,14 @@ public final class Bugsnatch {
     }
 
     public var debugInfo: String {
-        var info = ApplicationInfo.appInfo
-        info = info.appending(_deviceNameRow).appending(_systemVersionRow)
-
-        if _config?.shouldShowDeviceOrientation == true {
-            info.append(_deviceOrientationRow)
-        }
-
-        return info
+        return [
+            ApplicationInfo.appInfo,
+            _deviceNameRow,
+            _systemVersionRow,
+            _config?.shouldShowDeviceOrientation.mapTrue(to: _deviceOrientationRow)
+        ]
+            .compactMap { $0 }
+            .joined(separator: "\n")
     }
 
     // MARK: - Private
@@ -39,15 +39,15 @@ public final class Bugsnatch {
     }
 
     private var _deviceNameRow: String {
-        return "Device: \(UIDevice.modelName)\n"
+        return "Device: \(UIDevice.modelName)"
     }
 
     private var _systemVersionRow: String {
-        return "OS: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)\n"
+        return "OS: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
     }
 
     private var _deviceOrientationRow: String {
-        return "Device orientation: \(_deviceOrientation)\n"
+        return "Device orientation: \(_deviceOrientation)"
     }
 
     private var _deviceOrientation: String {

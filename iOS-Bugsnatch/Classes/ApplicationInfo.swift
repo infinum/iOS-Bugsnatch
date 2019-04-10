@@ -30,28 +30,13 @@ public struct ApplicationInfo {
     }
 
     public static var appInfo: String {
-        var appInfo = ""
-
-        if let appName = ApplicationInfo.appName {
-            let appNameRow = "Application name: \(appName)\n"
-            appInfo = appInfo.appending(appNameRow)
-        }
-
-        if let bundleId = ApplicationInfo.bundleId {
-            let bundleIdRow = "Bundle ID: \(bundleId)\n"
-            appInfo = appInfo.appending(bundleIdRow)
-        }
-
-        if let version = ApplicationInfo.version {
-            let versionRow = "Version: \(version)\n"
-            appInfo = appInfo.appending(versionRow)
-        }
-
-        if let buildNumber = ApplicationInfo.buildNumber {
-            let buildNumberRow = "Build number: \(buildNumber)\n"
-            appInfo = appInfo.appending(buildNumberRow)
-        }
-
-        return appInfo
+        return [
+            ApplicationInfo.appName.map { "Application name: \($0)" },
+            ApplicationInfo.bundleId.map { "Bundle ID: \($0)" },
+            ApplicationInfo.version.map { "Version: \($0)" },
+            ApplicationInfo.buildNumber.map { "Build number: \($0)" },
+        ]
+            .compactMap { $0 }
+            .joined(separator: "\n")
     }
 }
