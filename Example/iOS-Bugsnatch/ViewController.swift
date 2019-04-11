@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let bugsnatchConfig = BugsnatchConfig(shouldShowDeviceOrientation: true)
+        let bugsnatchConfig = BugsnatchConfig(shouldShowDeviceOrientation: true, trigger: ScreenshotTrigger())
         Bugsnatch.shared.setup(config: bugsnatchConfig)
     }
 

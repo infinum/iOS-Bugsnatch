@@ -7,49 +7,42 @@
 
 import Foundation
 
-protocol TriggerDelegate: class {
+public protocol TriggerDelegate: class {
     func didTrigger()
 }
 
-public class Trigger {
+public protocol Triggerable {
+    var delegate: TriggerDelegate? { get set }
+}
 
-    var type: Trigger.TriggerType
-    weak var delegate: TriggerDelegate?
+public class ScreenshotTrigger: Triggerable {
 
-    init?(type: Trigger.TriggerType?, delegate: TriggerDelegate) {
-        guard let _type = type else { return nil }
+    weak public var delegate: TriggerDelegate?
 
-        self.type = _type
-        self.delegate = delegate
+    public init() {
         _setup()
     }
 
-    public enum TriggerType {
-        case screenshot
-        case shakeGesture
-    }
-
-    // MARK: - Private -
-
     private func _setup() {
-        switch type {
-        case .screenshot:
-            _setupScreenshotTrigger()
-        case .shakeGesture:
-            _setupShakeGestureTrigger()
-        }
-    }
-
-    private func _setupScreenshotTrigger() {
         NotificationCenter.default.addObserver(
             forName: UIApplication.userDidTakeScreenshotNotification,
             object: nil,
-            queue: .main) { [weak delegate] notification in
-                delegate?.didTrigger()
+            queue: .main
+        ) { [weak self] notification in
+            self?.delegate?.didTrigger()
         }
     }
+}
 
-    private func _setupShakeGestureTrigger() {
+public class ShakeGestureTrigger: Triggerable {
+
+    weak public var delegate: TriggerDelegate?
+
+    public init() {
+        _setup()
+    }
+
+    private func _setup() {
         // TODO: - implement -
     }
 }

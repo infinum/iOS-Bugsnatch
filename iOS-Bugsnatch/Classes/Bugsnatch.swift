@@ -14,11 +14,12 @@ public final class Bugsnatch {
     public static let shared = Bugsnatch()
 
     private var _config: BugsnatchConfig?
-    private var _trigger: Trigger?
+    private var _trigger: Triggerable?
 
     public func setup(config: BugsnatchConfig) {
         _config = config
-        _setupTrigger()
+        _trigger = config.trigger
+        _trigger?.delegate = self
     }
 
     public var debugInfo: String {
@@ -33,10 +34,6 @@ public final class Bugsnatch {
     }
 
     // MARK: - Private
-
-    private func _setupTrigger() {
-        _trigger = Trigger(type: _config?.triggerType, delegate: self)
-    }
 
     private var _deviceNameRow: String {
         return "Device: \(Device.version.rawValue)"
@@ -64,19 +61,13 @@ public final class Bugsnatch {
             return "landscapeRight"
         }
     }
-
-    private func _saveScreenshotIfNeeded() {
-        guard _config?.triggerType != .screenshot else { return }
-        ScreenshotTaker.saveScreenshot()
-    }
 }
 
 extension Bugsnatch: TriggerDelegate {
 
-    func didTrigger() {
+    public func didTrigger() {
         // TODO: - do expected action -
         print(debugInfo)
-        _saveScreenshotIfNeeded()
         ProductiveViewController.present()
     }
 }

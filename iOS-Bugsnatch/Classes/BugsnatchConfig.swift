@@ -10,10 +10,10 @@ import Foundation
 public class BugsnatchConfig {
 
     public let shouldShowDeviceOrientation: Bool
-    public let triggerType: Trigger.TriggerType
+    public let trigger: Triggerable
 
-    public init(shouldShowDeviceOrientation: Bool, triggerType: Trigger.TriggerType = .screenshot) {
+    public init(shouldShowDeviceOrientation: Bool, trigger: Triggerable) {
         self.shouldShowDeviceOrientation = shouldShowDeviceOrientation
-        self.triggerType = triggerType
+        self.trigger = trigger
     }
 }
