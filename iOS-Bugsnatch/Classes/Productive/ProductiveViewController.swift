@@ -8,6 +8,16 @@
 import UIKit
 import WebKit
 
+public struct ProductiveConfig: TriggerActionConfig {
+    var organizationId: String
+    var projectId: Int
+
+    public init(organizationId: String, projectId: Int) {
+        self.organizationId = organizationId
+        self.projectId = projectId
+    }
+}
+
 class ProductiveViewController: UIViewController {
 
     // MARK: - IBOutlets -
@@ -17,6 +27,7 @@ class ProductiveViewController: UIViewController {
     // MARK: - Public properties -
 
     static let identifier = String(describing: ProductiveViewController.self)
+    public var config: ProductiveConfig?
 
     // MARK: - Lifecycle -
 
@@ -25,12 +36,16 @@ class ProductiveViewController: UIViewController {
         _setupWebView()
     }
 
-    static func present() {
+    static func present(with config: TriggerActionConfig?) {
         let bugsnatchBundle = Bundle(for: ProductiveViewController.self)
         let storyboard = UIStoryboard(name: identifier, bundle: bugsnatchBundle)
-        let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
+        guard
+            let productiveConfig = config as? ProductiveConfig,
+            let productiveViewController = storyboard.instantiateViewController(withIdentifier: identifier) as? ProductiveViewController
+        else { return }
+        productiveViewController.config = productiveConfig
         let rootViewController = UIApplication.shared.keyWindow?.rootViewController
-        rootViewController?.presentViewControllerFromVisibleViewController(viewControllerToPresent: viewController, animated: true)
+        rootViewController?.presentViewControllerFromVisibleViewController(viewControllerToPresent: productiveViewController, animated: true)
     }
 
     // MARK: - IBActions -
@@ -42,10 +57,9 @@ class ProductiveViewController: UIViewController {
     // MARK: - Private methods -
 
     private func _setupWebView() {
-        let organizationId = "1-infinum"
-        let projectId = 1116
-
         guard
+            let organizationId = config?.organizationId,
+            let projectId = config?.projectId,
             let url = URL(string: "https://app.productive.io/\(organizationId)/projects/\(projectId)/tasks/new"),
             let productiveScriptSource = _productiveScriptSource
         else {

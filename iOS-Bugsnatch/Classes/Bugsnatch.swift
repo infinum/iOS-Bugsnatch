@@ -7,6 +7,8 @@
 
 import Foundation
 
+public protocol TriggerActionConfig {}
+
 public final class Bugsnatch {
 
     private init() {}
@@ -16,7 +18,7 @@ public final class Bugsnatch {
     private var _config: BugsnatchConfig?
     private var _trigger: Triggerable?
 
-    public func setup(config: BugsnatchConfig) {
+    public func setup(config: BugsnatchConfig, triggerActionConfig: TriggerActionConfig? = nil) {
         _config = config
         _trigger = config.trigger
         _trigger?.delegate = self
@@ -68,6 +70,6 @@ extension Bugsnatch: TriggerDelegate {
     public func didTrigger() {
         // TODO: - do expected action -
         print(debugInfo)
-        ProductiveViewController.present()
+        ProductiveViewController.present(with: _config?.triggerActionConfig)
     }
 }

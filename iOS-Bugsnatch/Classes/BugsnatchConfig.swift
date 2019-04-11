@@ -9,11 +9,13 @@ import Foundation
 
 public class BugsnatchConfig {
 
-    public let shouldShowDeviceOrientation: Bool
-    public let trigger: Triggerable
+    let trigger: Triggerable
+    let shouldShowDeviceOrientation: Bool
+    let triggerActionConfig: TriggerActionConfig?
 
-    public init(shouldShowDeviceOrientation: Bool, trigger: Triggerable) {
-        self.shouldShowDeviceOrientation = shouldShowDeviceOrientation
+    public init(trigger: Triggerable, shouldShowDeviceOrientation: Bool = false, triggerActionConfig: TriggerActionConfig? = nil) {
         self.trigger = trigger
+        self.shouldShowDeviceOrientation = shouldShowDeviceOrientation
+        self.triggerActionConfig = triggerActionConfig
     }
 }
