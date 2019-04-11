@@ -39,7 +39,7 @@ public final class Bugsnatch {
     }
 
     private var _deviceNameRow: String {
-        return "Device: \(UIDevice.modelName)"
+        return "Device: \(Device.version.rawValue)"
     }
 
     private var _systemVersionRow: String {
