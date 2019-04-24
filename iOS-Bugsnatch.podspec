@@ -21,22 +21,30 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Damjan Dabo/iOS-Bugsnatch'
+  s.homepage         = 'https://github.com/infinum/iOS-Bugsnatch'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Damjan Dabo' => 'damjan.dabo@infinum.hr' }
-  s.source           = { :git => 'https://github.com/Damjan Dabo/iOS-Bugsnatch.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/infinum/iOS-Bugsnatch.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.3'
+  s.swift_version = '5.0'
 
-  s.source_files = 'iOS-Bugsnatch/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'iOS-Bugsnatch' => ['iOS-Bugsnatch/Assets/*.png']
-  # }
+  s.default_subspec = 'Email'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'Core' do |sp|
+      sp.source_files = 'iOS-Bugsnatch/Classes/Core/**/*'
+      sp.frameworks = 'Foundation'
+  end
+
+  s.subspec 'Email' do |sp|
+      sp.source_files = 'iOS-Bugsnatch/Classes/Email/**/*'
+      sp.dependency 'iOS-Bugsnatch/Core'
+  end
+
+  s.subspec 'Productive' do |sp|
+      sp.source_files = 'iOS-Bugsnatch/Classes/Productive/**/*'
+      sp.dependency 'iOS-Bugsnatch/Core'
+  end
+
 end

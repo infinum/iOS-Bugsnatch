@@ -14,12 +14,12 @@ public final class Bugsnatch {
     private init() {}
 
     public static let shared = Bugsnatch()
+    var config: BugsnatchConfig?
 
-    private var _config: BugsnatchConfig?
     private var _trigger: Triggerable?
 
     public func setup(config: BugsnatchConfig, triggerActionConfig: TriggerActionConfig? = nil) {
-        _config = config
+        self.config = config
         _trigger = config.trigger
         _trigger?.delegate = self
     }
@@ -29,8 +29,8 @@ public final class Bugsnatch {
             ApplicationInfo.appInfo,
             _deviceNameRow,
             _systemVersionRow,
-            _config?.shouldShowDeviceOrientation.mapTrue(to: _deviceOrientationRow)
-        ]
+            config?.shouldShowDeviceOrientation.mapTrue(to: _deviceOrientationRow)
+            ]
             .compactMap { $0 }
             .joined(separator: "\n")
     }
@@ -62,14 +62,5 @@ public final class Bugsnatch {
         case .landscapeRight:
             return "landscapeRight"
         }
-    }
-}
-
-extension Bugsnatch: TriggerDelegate {
-
-    public func didTrigger() {
-        // TODO: - do expected action -
-        print(debugInfo)
-        ProductiveViewController.present(with: _config?.triggerActionConfig)
     }
 }

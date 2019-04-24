@@ -39,10 +39,12 @@ class ProductiveViewController: UIViewController {
     static func present(with config: TriggerActionConfig?) {
         let bugsnatchBundle = Bundle(for: ProductiveViewController.self)
         let storyboard = UIStoryboard(name: identifier, bundle: bugsnatchBundle)
+
         guard
             let productiveConfig = config as? ProductiveConfig,
             let productiveViewController = storyboard.instantiateViewController(withIdentifier: identifier) as? ProductiveViewController
-        else { return }
+            else { return }
+
         productiveViewController.config = productiveConfig
         let rootViewController = UIApplication.shared.keyWindow?.rootViewController
         rootViewController?.presentViewControllerFromVisibleViewController(viewControllerToPresent: productiveViewController, animated: true)
@@ -62,9 +64,9 @@ class ProductiveViewController: UIViewController {
             let projectId = config?.projectId,
             let url = URL(string: "https://app.productive.io/\(organizationId)/projects/\(projectId)/tasks/new"),
             let productiveScriptSource = _productiveScriptSource
-        else {
-            // TODO: - show some message -
-            return
+            else {
+                // TODO: - show some message -
+                return
         }
 
         let script = WKUserScript(source: productiveScriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
@@ -139,6 +141,6 @@ fileprivate extension WKWebView {
             leftAnchor.constraint(equalTo: containerView.leftAnchor),
             bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
             heightAnchor.constraint(equalTo: containerView.heightAnchor)
-        ])
+            ])
     }
 }

@@ -13,16 +13,18 @@
 		54B0115DB052B648F989D735C6080683 /* Pods-iOS-Bugsnatch_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A6054E7A07BEA3040A890198D2BF9D /* Pods-iOS-Bugsnatch_Tests-dummy.m */; };
 		77CC1FBAB779A9B1FE4924107725BBB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		AA9FBB14EE496758B95F427EEAE714BF /* Pods-iOS-Bugsnatch_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84ECE4630D88FACA4E0A9D67C07267F2 /* Pods-iOS-Bugsnatch_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD1C9AAF2245237F00B41B46 /* ApplicationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C9AAE2245237F00B41B46 /* ApplicationInfo.swift */; };
-		AD1C9AB12245242A00B41B46 /* Bugsnatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C9AB02245242A00B41B46 /* Bugsnatch.swift */; };
-		AD1C9ABB224531B100B41B46 /* BugsnatchConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C9ABA224531B100B41B46 /* BugsnatchConfig.swift */; };
-		AD1C9ABD2248D57900B41B46 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C9ABC2248D57900B41B46 /* Trigger.swift */; };
-		AD1C9ABF2248D8A000B41B46 /* ScreenshotTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C9ABE2248D8A000B41B46 /* ScreenshotTaker.swift */; };
 		ADAADC69225E2CC9005B0553 /* ProductiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAADC67225E2CC8005B0553 /* ProductiveViewController.storyboard */; };
 		ADAADC6A225E2CC9005B0553 /* ProductiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAADC68225E2CC8005B0553 /* ProductiveViewController.swift */; };
 		ADAADC73225E494A005B0553 /* productiveScript.js in Resources */ = {isa = PBXBuildFile; fileRef = ADAADC72225E4949005B0553 /* productiveScript.js */; };
-		ADAADC76225F3FD6005B0553 /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAADC75225F3FD6005B0553 /* Bool+Extension.swift */; };
-		ADAADC78225F3FE2005B0553 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAADC77225F3FE1005B0553 /* Device.swift */; };
+		ADC5A08122707DB900BDDAA2 /* BugsnatchConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07922707DB900BDDAA2 /* BugsnatchConfig.swift */; };
+		ADC5A08222707DB900BDDAA2 /* ApplicationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07A22707DB900BDDAA2 /* ApplicationInfo.swift */; };
+		ADC5A08322707DB900BDDAA2 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07B22707DB900BDDAA2 /* Trigger.swift */; };
+		ADC5A08422707DB900BDDAA2 /* ScreenshotTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07C22707DB900BDDAA2 /* ScreenshotTaker.swift */; };
+		ADC5A08522707DB900BDDAA2 /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07E22707DB900BDDAA2 /* Bool+Extension.swift */; };
+		ADC5A08622707DB900BDDAA2 /* Bugsnatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07F22707DB900BDDAA2 /* Bugsnatch.swift */; };
+		ADC5A08722707DB900BDDAA2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A08022707DB900BDDAA2 /* Device.swift */; };
+		ADC5A08C22707EEB00BDDAA2 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A08B22707EEB00BDDAA2 /* Bugsnatch+Extension.swift */; };
+		ADC5A08E22707F2800BDDAA2 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A08D22707F2800BDDAA2 /* Bugsnatch+Extension.swift */; };
 		C13D1B51E80548E1BBB0AB7C346A6742 /* iOS-Bugsnatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B2BDCE5F45FB153769E4F24913FE7 /* iOS-Bugsnatch-dummy.m */; };
 		DFD85FB0FBE7CF5409AEBF7093C6AD9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		FD29D30EB3A02492A48EC320C693D2C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -65,16 +67,18 @@
 		9A6E1C2571885445F30158EB6539441F /* Pods-iOS-Bugsnatch_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOS-Bugsnatch_Example-dummy.m"; sourceTree = "<group>"; };
 		9F8274B289611E039DDBDD36A4D26D61 /* Pods-iOS-Bugsnatch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A19B93029614A64809390921944B3623 /* iOS-Bugsnatch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Bugsnatch-prefix.pch"; sourceTree = "<group>"; };
-		AD1C9AAE2245237F00B41B46 /* ApplicationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApplicationInfo.swift; path = "iOS-Bugsnatch/Classes/ApplicationInfo.swift"; sourceTree = "<group>"; };
-		AD1C9AB02245242A00B41B46 /* Bugsnatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bugsnatch.swift; path = "iOS-Bugsnatch/Classes/Bugsnatch.swift"; sourceTree = "<group>"; };
-		AD1C9ABA224531B100B41B46 /* BugsnatchConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BugsnatchConfig.swift; path = "iOS-Bugsnatch/Classes/BugsnatchConfig.swift"; sourceTree = "<group>"; };
-		AD1C9ABC2248D57900B41B46 /* Trigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Trigger.swift; path = "iOS-Bugsnatch/Classes/Trigger.swift"; sourceTree = "<group>"; };
-		AD1C9ABE2248D8A000B41B46 /* ScreenshotTaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScreenshotTaker.swift; path = "iOS-Bugsnatch/Classes/ScreenshotTaker.swift"; sourceTree = "<group>"; };
 		ADAADC67225E2CC8005B0553 /* ProductiveViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductiveViewController.storyboard; sourceTree = "<group>"; };
 		ADAADC68225E2CC8005B0553 /* ProductiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductiveViewController.swift; sourceTree = "<group>"; };
-		ADAADC72225E4949005B0553 /* productiveScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = productiveScript.js; path = "iOS-Bugsnatch/Assets/productiveScript.js"; sourceTree = "<group>"; };
-		ADAADC75225F3FD6005B0553 /* Bool+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
-		ADAADC77225F3FE1005B0553 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = "iOS-Bugsnatch/Classes/Device.swift"; sourceTree = "<group>"; };
+		ADAADC72225E4949005B0553 /* productiveScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = productiveScript.js; sourceTree = "<group>"; };
+		ADC5A07922707DB900BDDAA2 /* BugsnatchConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugsnatchConfig.swift; sourceTree = "<group>"; };
+		ADC5A07A22707DB900BDDAA2 /* ApplicationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationInfo.swift; sourceTree = "<group>"; };
+		ADC5A07B22707DB900BDDAA2 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
+		ADC5A07C22707DB900BDDAA2 /* ScreenshotTaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotTaker.swift; sourceTree = "<group>"; };
+		ADC5A07E22707DB900BDDAA2 /* Bool+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
+		ADC5A07F22707DB900BDDAA2 /* Bugsnatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bugsnatch.swift; sourceTree = "<group>"; };
+		ADC5A08022707DB900BDDAA2 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		ADC5A08B22707EEB00BDDAA2 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
+		ADC5A08D22707F2800BDDAA2 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
 		AFA4199902E194111A08CB4859F8DCDA /* Pods_iOS_Bugsnatch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04D7DE077ADAD341B4C000D528116FD /* Pods-iOS-Bugsnatch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS-Bugsnatch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BCD67E81E894B46C0B41FE389839A687 /* Pods-iOS-Bugsnatch_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-Bugsnatch_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -190,17 +194,11 @@
 		A1F83046F2A25BE21A61773F48568AA0 /* iOS-Bugsnatch */ = {
 			isa = PBXGroup;
 			children = (
+				ADC5A08A22707EEB00BDDAA2 /* Email */,
+				ADC5A07822707DB900BDDAA2 /* Core */,
 				C7943F5789186FF0EE696DE2ABEA05AC /* Pod */,
 				F236B2C84A430F3E844042F42D3CEA6F /* Support Files */,
 				ADAADC66225E2CC8005B0553 /* Productive */,
-				ADAADC74225F3FD6005B0553 /* Extensions */,
-				AD1C9AAE2245237F00B41B46 /* ApplicationInfo.swift */,
-				AD1C9AB02245242A00B41B46 /* Bugsnatch.swift */,
-				AD1C9ABA224531B100B41B46 /* BugsnatchConfig.swift */,
-				AD1C9ABC2248D57900B41B46 /* Trigger.swift */,
-				AD1C9ABE2248D8A000B41B46 /* ScreenshotTaker.swift */,
-				ADAADC77225F3FE1005B0553 /* Device.swift */,
-				ADAADC72225E4949005B0553 /* productiveScript.js */,
 			);
 			name = "iOS-Bugsnatch";
 			path = ../..;
@@ -217,6 +215,8 @@
 		ADAADC66225E2CC8005B0553 /* Productive */ = {
 			isa = PBXGroup;
 			children = (
+				ADC5A08D22707F2800BDDAA2 /* Bugsnatch+Extension.swift */,
+				ADAADC72225E4949005B0553 /* productiveScript.js */,
 				ADAADC67225E2CC8005B0553 /* ProductiveViewController.storyboard */,
 				ADAADC68225E2CC8005B0553 /* ProductiveViewController.swift */,
 			);
@@ -224,13 +224,36 @@
 			path = "iOS-Bugsnatch/Classes/Productive";
 			sourceTree = "<group>";
 		};
-		ADAADC74225F3FD6005B0553 /* Extensions */ = {
+		ADC5A07822707DB900BDDAA2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				ADAADC75225F3FD6005B0553 /* Bool+Extension.swift */,
+				ADC5A07922707DB900BDDAA2 /* BugsnatchConfig.swift */,
+				ADC5A07A22707DB900BDDAA2 /* ApplicationInfo.swift */,
+				ADC5A07B22707DB900BDDAA2 /* Trigger.swift */,
+				ADC5A07C22707DB900BDDAA2 /* ScreenshotTaker.swift */,
+				ADC5A07D22707DB900BDDAA2 /* Extensions */,
+				ADC5A07F22707DB900BDDAA2 /* Bugsnatch.swift */,
+				ADC5A08022707DB900BDDAA2 /* Device.swift */,
 			);
-			name = Extensions;
-			path = "iOS-Bugsnatch/Classes/Extensions";
+			name = Core;
+			path = "iOS-Bugsnatch/Classes/Core";
+			sourceTree = "<group>";
+		};
+		ADC5A07D22707DB900BDDAA2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5A07E22707DB900BDDAA2 /* Bool+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ADC5A08A22707EEB00BDDAA2 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5A08B22707EEB00BDDAA2 /* Bugsnatch+Extension.swift */,
+			);
+			name = Email;
+			path = "iOS-Bugsnatch/Classes/Email";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -415,15 +438,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD1C9ABB224531B100B41B46 /* BugsnatchConfig.swift in Sources */,
-				AD1C9AAF2245237F00B41B46 /* ApplicationInfo.swift in Sources */,
-				AD1C9ABF2248D8A000B41B46 /* ScreenshotTaker.swift in Sources */,
-				ADAADC78225F3FE2005B0553 /* Device.swift in Sources */,
-				ADAADC76225F3FD6005B0553 /* Bool+Extension.swift in Sources */,
-				AD1C9AB12245242A00B41B46 /* Bugsnatch.swift in Sources */,
+				ADC5A08222707DB900BDDAA2 /* ApplicationInfo.swift in Sources */,
+				ADC5A08622707DB900BDDAA2 /* Bugsnatch.swift in Sources */,
 				ADAADC6A225E2CC9005B0553 /* ProductiveViewController.swift in Sources */,
-				AD1C9ABD2248D57900B41B46 /* Trigger.swift in Sources */,
+				ADC5A08722707DB900BDDAA2 /* Device.swift in Sources */,
+				ADC5A08522707DB900BDDAA2 /* Bool+Extension.swift in Sources */,
 				C13D1B51E80548E1BBB0AB7C346A6742 /* iOS-Bugsnatch-dummy.m in Sources */,
+				ADC5A08E22707F2800BDDAA2 /* Bugsnatch+Extension.swift in Sources */,
+				ADC5A08422707DB900BDDAA2 /* ScreenshotTaker.swift in Sources */,
+				ADC5A08322707DB900BDDAA2 /* Trigger.swift in Sources */,
+				ADC5A08122707DB900BDDAA2 /* BugsnatchConfig.swift in Sources */,
+				ADC5A08C22707EEB00BDDAA2 /* Bugsnatch+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
