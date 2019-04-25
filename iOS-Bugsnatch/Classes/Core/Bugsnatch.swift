@@ -24,6 +24,11 @@ public final class Bugsnatch {
         _trigger?.delegate = self
     }
 
+    public var bugTitle: String {
+        guard let applicationName = ApplicationInfo.appName else { return "Bug report" }
+        return "\(applicationName) bug report"
+    }
+
     public var debugInfo: String {
         return [
             ApplicationInfo.appInfo,

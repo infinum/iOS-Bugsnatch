@@ -104,32 +104,6 @@ class ProductiveViewController: UIViewController {
 
 extension ProductiveViewController: WKNavigationDelegate {}
 
-extension UIViewController {
-
-    // taken from https://gist.github.com/MartinMoizard/6537467
-    public func presentViewControllerFromVisibleViewController(
-        viewControllerToPresent: UIViewController,
-        animated flag: Bool,
-        completion: (() -> Void)? = nil)
-    {
-        if let navigationController = self as? UINavigationController, let topViewController = navigationController.topViewController {
-            topViewController.presentViewControllerFromVisibleViewController(
-                viewControllerToPresent: viewControllerToPresent,
-                animated: true,
-                completion: completion)
-
-        } else if let _presentedViewController = presentedViewController {
-            _presentedViewController.presentViewControllerFromVisibleViewController(
-                viewControllerToPresent: viewControllerToPresent,
-                animated: true,
-                completion: completion)
-
-        } else {
-            present(viewControllerToPresent, animated: true, completion: completion)
-        }
-    }
-}
-
 fileprivate extension WKWebView {
 
     func embed(in containerView: UIView) {

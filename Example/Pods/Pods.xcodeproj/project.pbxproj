@@ -13,6 +13,8 @@
 		54B0115DB052B648F989D735C6080683 /* Pods-iOS-Bugsnatch_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A6054E7A07BEA3040A890198D2BF9D /* Pods-iOS-Bugsnatch_Tests-dummy.m */; };
 		77CC1FBAB779A9B1FE4924107725BBB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		AA9FBB14EE496758B95F427EEAE714BF /* Pods-iOS-Bugsnatch_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84ECE4630D88FACA4E0A9D67C07267F2 /* Pods-iOS-Bugsnatch_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD0226372271E7F3000990A8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0226362271E7F3000990A8 /* UIViewController+Extension.swift */; };
+		AD62B87F2271C1BA00893D46 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62B87E2271C1BA00893D46 /* Bugsnatch+Extension.swift */; };
 		ADAADC69225E2CC9005B0553 /* ProductiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAADC67225E2CC8005B0553 /* ProductiveViewController.storyboard */; };
 		ADAADC6A225E2CC9005B0553 /* ProductiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAADC68225E2CC8005B0553 /* ProductiveViewController.swift */; };
 		ADAADC73225E494A005B0553 /* productiveScript.js in Resources */ = {isa = PBXBuildFile; fileRef = ADAADC72225E4949005B0553 /* productiveScript.js */; };
@@ -23,8 +25,8 @@
 		ADC5A08522707DB900BDDAA2 /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07E22707DB900BDDAA2 /* Bool+Extension.swift */; };
 		ADC5A08622707DB900BDDAA2 /* Bugsnatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07F22707DB900BDDAA2 /* Bugsnatch.swift */; };
 		ADC5A08722707DB900BDDAA2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A08022707DB900BDDAA2 /* Device.swift */; };
-		ADC5A08C22707EEB00BDDAA2 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A08B22707EEB00BDDAA2 /* Bugsnatch+Extension.swift */; };
-		ADC5A08E22707F2800BDDAA2 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A08D22707F2800BDDAA2 /* Bugsnatch+Extension.swift */; };
+		ADE844922271E62800BDABC6 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE844912271E62800BDABC6 /* Bugsnatch+Extension.swift */; };
+		ADF04FB12271A53300887EEB /* EmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF04FB02271A53300887EEB /* EmailManager.swift */; };
 		C13D1B51E80548E1BBB0AB7C346A6742 /* iOS-Bugsnatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B2BDCE5F45FB153769E4F24913FE7 /* iOS-Bugsnatch-dummy.m */; };
 		DFD85FB0FBE7CF5409AEBF7093C6AD9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		FD29D30EB3A02492A48EC320C693D2C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -67,6 +69,8 @@
 		9A6E1C2571885445F30158EB6539441F /* Pods-iOS-Bugsnatch_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOS-Bugsnatch_Example-dummy.m"; sourceTree = "<group>"; };
 		9F8274B289611E039DDBDD36A4D26D61 /* Pods-iOS-Bugsnatch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A19B93029614A64809390921944B3623 /* iOS-Bugsnatch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Bugsnatch-prefix.pch"; sourceTree = "<group>"; };
+		AD0226362271E7F3000990A8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		AD62B87E2271C1BA00893D46 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
 		ADAADC67225E2CC8005B0553 /* ProductiveViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductiveViewController.storyboard; sourceTree = "<group>"; };
 		ADAADC68225E2CC8005B0553 /* ProductiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductiveViewController.swift; sourceTree = "<group>"; };
 		ADAADC72225E4949005B0553 /* productiveScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = productiveScript.js; sourceTree = "<group>"; };
@@ -77,8 +81,8 @@
 		ADC5A07E22707DB900BDDAA2 /* Bool+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
 		ADC5A07F22707DB900BDDAA2 /* Bugsnatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bugsnatch.swift; sourceTree = "<group>"; };
 		ADC5A08022707DB900BDDAA2 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		ADC5A08B22707EEB00BDDAA2 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
-		ADC5A08D22707F2800BDDAA2 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
+		ADE844912271E62800BDABC6 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
+		ADF04FB02271A53300887EEB /* EmailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailManager.swift; sourceTree = "<group>"; };
 		AFA4199902E194111A08CB4859F8DCDA /* Pods_iOS_Bugsnatch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04D7DE077ADAD341B4C000D528116FD /* Pods-iOS-Bugsnatch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS-Bugsnatch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BCD67E81E894B46C0B41FE389839A687 /* Pods-iOS-Bugsnatch_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-Bugsnatch_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -215,7 +219,7 @@
 		ADAADC66225E2CC8005B0553 /* Productive */ = {
 			isa = PBXGroup;
 			children = (
-				ADC5A08D22707F2800BDDAA2 /* Bugsnatch+Extension.swift */,
+				ADE844912271E62800BDABC6 /* Bugsnatch+Extension.swift */,
 				ADAADC72225E4949005B0553 /* productiveScript.js */,
 				ADAADC67225E2CC8005B0553 /* ProductiveViewController.storyboard */,
 				ADAADC68225E2CC8005B0553 /* ProductiveViewController.swift */,
@@ -243,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC5A07E22707DB900BDDAA2 /* Bool+Extension.swift */,
+				AD0226362271E7F3000990A8 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,7 +255,8 @@
 		ADC5A08A22707EEB00BDDAA2 /* Email */ = {
 			isa = PBXGroup;
 			children = (
-				ADC5A08B22707EEB00BDDAA2 /* Bugsnatch+Extension.swift */,
+				AD62B87E2271C1BA00893D46 /* Bugsnatch+Extension.swift */,
+				ADF04FB02271A53300887EEB /* EmailManager.swift */,
 			);
 			name = Email;
 			path = "iOS-Bugsnatch/Classes/Email";
@@ -439,16 +445,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC5A08222707DB900BDDAA2 /* ApplicationInfo.swift in Sources */,
+				AD0226372271E7F3000990A8 /* UIViewController+Extension.swift in Sources */,
 				ADC5A08622707DB900BDDAA2 /* Bugsnatch.swift in Sources */,
 				ADAADC6A225E2CC9005B0553 /* ProductiveViewController.swift in Sources */,
 				ADC5A08722707DB900BDDAA2 /* Device.swift in Sources */,
+				ADF04FB12271A53300887EEB /* EmailManager.swift in Sources */,
 				ADC5A08522707DB900BDDAA2 /* Bool+Extension.swift in Sources */,
 				C13D1B51E80548E1BBB0AB7C346A6742 /* iOS-Bugsnatch-dummy.m in Sources */,
-				ADC5A08E22707F2800BDDAA2 /* Bugsnatch+Extension.swift in Sources */,
 				ADC5A08422707DB900BDDAA2 /* ScreenshotTaker.swift in Sources */,
 				ADC5A08322707DB900BDDAA2 /* Trigger.swift in Sources */,
 				ADC5A08122707DB900BDDAA2 /* BugsnatchConfig.swift in Sources */,
-				ADC5A08C22707EEB00BDDAA2 /* Bugsnatch+Extension.swift in Sources */,
+				AD62B87F2271C1BA00893D46 /* Bugsnatch+Extension.swift in Sources */,
+				ADE844922271E62800BDABC6 /* Bugsnatch+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

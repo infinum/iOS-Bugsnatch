@@ -10,7 +10,6 @@ import Foundation
 extension Bugsnatch: TriggerDelegate {
 
     public func didTrigger() {
-        // TODO: - do expected action -
-        print("Email action")
+        EmailManager.shared.sendDebugEmail()
     }
 }
