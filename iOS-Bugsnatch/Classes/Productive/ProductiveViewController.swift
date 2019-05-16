@@ -65,7 +65,7 @@ class ProductiveViewController: UIViewController {
             let url = URL(string: "https://app.productive.io/\(organizationId)/projects/\(projectId)/tasks/new"),
             let productiveScriptSource = _productiveScriptSource
             else {
-                // TODO: - show some message -
+                _showSomethingWentWrongAlert()
                 return
         }
 
@@ -100,9 +100,44 @@ class ProductiveViewController: UIViewController {
             return nil
         }
     }
+
+    private func _showRetryAlert(with error: Error) {
+        let alertController = UIAlertController(title: "Oops", message: error.localizedDescription, preferredStyle: .alert)
+
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] (_) in
+            self?._setupWebView()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [weak self] (_) in
+            self?.dismiss(animated: true)
+        }
+
+        alertController.addAction(cancelAction)
+        alertController.addAction(retryAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
+
+    private func _showSomethingWentWrongAlert() {
+        let alertController = UIAlertController(title: "Oops", message: "Something went wrong, please contact developers", preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] (_) in
+            self?.dismiss(animated: true)
+        }
+
+        alertController.addAction(okAction)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+
+            self?.present(alertController, animated: true, completion: nil)
+        }
+    }
 }
 
-extension ProductiveViewController: WKNavigationDelegate {}
+extension ProductiveViewController: WKNavigationDelegate {
+
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        _showRetryAlert(with: error)
+    }
+}
 
 fileprivate extension WKWebView {
 
