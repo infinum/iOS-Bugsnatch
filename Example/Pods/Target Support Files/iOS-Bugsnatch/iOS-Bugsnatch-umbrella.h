@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double iOS_BugsnatchVersionNumber;
-FOUNDATION_EXPORT const unsigned char iOS_BugsnatchVersionString[];
+FOUNDATION_EXPORT double BugsnatchVersionNumber;
+FOUNDATION_EXPORT const unsigned char BugsnatchVersionString[];
 

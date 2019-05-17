@@ -8,30 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		04F4E3EDC27A0B8B8EDDB81F28D43564 /* Pods-iOS-Bugsnatch_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6E1C2571885445F30158EB6539441F /* Pods-iOS-Bugsnatch_Example-dummy.m */; };
-		3048604C59FB6510383998167AFEFCF7 /* iOS-Bugsnatch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC830ACBF1F8600E19FC04517F059A3 /* iOS-Bugsnatch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05C8908609CA3B08BBE8D4A0ED0517AF /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D1FB1EB13CDD5A128FA322665B742 /* Bool+Extension.swift */; };
+		202014F79E33BE8B9159857150722F24 /* Bugsnatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C93DB0DBA4C8AB014220D7821BBFDC8 /* Bugsnatch.swift */; };
 		3644350624C8CDEB5B9C1CF07CE2EC36 /* Pods-iOS-Bugsnatch_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68C14EE4E084AF5A7F85D533343461D5 /* Pods-iOS-Bugsnatch_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BDE4105E70DA53BD3FBE9A32C458BC8 /* EmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD3F3FA4BB144627C6EC741BFF13F50 /* EmailManager.swift */; };
+		4DB37B097DE9FEF75BDFCA9410B44DC6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAAE0E629BEEE218605E01DB73EFB9 /* UIViewController+Extension.swift */; };
 		54B0115DB052B648F989D735C6080683 /* Pods-iOS-Bugsnatch_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A6054E7A07BEA3040A890198D2BF9D /* Pods-iOS-Bugsnatch_Tests-dummy.m */; };
+		55EE9909FF440A281B613530948D3F80 /* EmailConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D4C38380B419EEB4C716ACC981AE96 /* EmailConfig.swift */; };
+		57EA9B874D046B8398A0448026F01740 /* BugsnatchConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC9806C1B4E370991FCC98BDD5C94A /* BugsnatchConfig.swift */; };
+		5EC231E204D6AB8B02F03A20D22D614F /* iOS-Bugsnatch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B23E912FC11BB869100F00397FC9C27 /* iOS-Bugsnatch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		698CB23F8B3EE1074E51D0EBE8A65A82 /* ProductiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC1219D1ADEAC1E42C741930983FD /* ProductiveViewController.swift */; };
 		77CC1FBAB779A9B1FE4924107725BBB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		7CFE91BFD9CB1B29AD2AF173F0DC2E4C /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109FBBA108C2995B24D084D3462E2A3 /* Bugsnatch+Extension.swift */; };
+		9DF84F9BE2BF98CD78AC263236F2C0CC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2483AE671FB7BF1A3482EEF31EAD19 /* UIView+Extension.swift */; };
+		A91AC55AAD0A0599E947148DCCB701C9 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06167CC2CDF99C53F5FCAD9068497867 /* Trigger.swift */; };
 		AA9FBB14EE496758B95F427EEAE714BF /* Pods-iOS-Bugsnatch_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84ECE4630D88FACA4E0A9D67C07267F2 /* Pods-iOS-Bugsnatch_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD0226372271E7F3000990A8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0226362271E7F3000990A8 /* UIViewController+Extension.swift */; };
-		AD4F389C228ED3A900F82FA8 /* EmailConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F389B228ED3A900F82FA8 /* EmailConfig.swift */; };
-		AD4F389E228EDA5100F82FA8 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F389D228EDA5100F82FA8 /* Bugsnatch+Extension.swift */; };
-		AD4F38A0228EDAD700F82FA8 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F389F228EDAD700F82FA8 /* Bugsnatch+Extension.swift */; };
-		ADAADC6A225E2CC9005B0553 /* ProductiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAADC68225E2CC8005B0553 /* ProductiveViewController.swift */; };
-		ADAADC73225E494A005B0553 /* productiveScript.js in Resources */ = {isa = PBXBuildFile; fileRef = ADAADC72225E4949005B0553 /* productiveScript.js */; };
-		ADC5A08122707DB900BDDAA2 /* BugsnatchConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07922707DB900BDDAA2 /* BugsnatchConfig.swift */; };
-		ADC5A08222707DB900BDDAA2 /* ApplicationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07A22707DB900BDDAA2 /* ApplicationInfo.swift */; };
-		ADC5A08322707DB900BDDAA2 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07B22707DB900BDDAA2 /* Trigger.swift */; };
-		ADC5A08422707DB900BDDAA2 /* ScreenshotTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07C22707DB900BDDAA2 /* ScreenshotTaker.swift */; };
-		ADC5A08522707DB900BDDAA2 /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07E22707DB900BDDAA2 /* Bool+Extension.swift */; };
-		ADC5A08622707DB900BDDAA2 /* Bugsnatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A07F22707DB900BDDAA2 /* Bugsnatch.swift */; };
-		ADC5A08722707DB900BDDAA2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5A08022707DB900BDDAA2 /* Device.swift */; };
-		ADEDFDA9228DA50600EA34C7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEDFDA8228DA50600EA34C7 /* UIView+Extension.swift */; };
-		ADEDFDAB228E9DD500EA34C7 /* ProductiveConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEDFDAA228E9DD500EA34C7 /* ProductiveConfig.swift */; };
-		ADF04FB12271A53300887EEB /* EmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF04FB02271A53300887EEB /* EmailManager.swift */; };
-		C13D1B51E80548E1BBB0AB7C346A6742 /* iOS-Bugsnatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B2BDCE5F45FB153769E4F24913FE7 /* iOS-Bugsnatch-dummy.m */; };
+		AD05CACD228EE5E5008A8B0A /* productiveScript.js in Resources */ = {isa = PBXBuildFile; fileRef = 19FDD4571AA0B6EEE2D79EE36B9ACBFF /* productiveScript.js */; };
+		AD05CACF228EE6AF008A8B0A /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05CACE228EE6AF008A8B0A /* Bugsnatch+Extension.swift */; };
+		BCA7EE57ADF6DE9248FB035EEE1F2FC9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562A83BBE8FC66471BF37AAA3AB56BC /* Device.swift */; };
+		C1CD77EA5E274360782012921228810B /* productiveScript.js in Sources */ = {isa = PBXBuildFile; fileRef = 19FDD4571AA0B6EEE2D79EE36B9ACBFF /* productiveScript.js */; };
+		C7547C29AFC81A854680B36A6D1DA798 /* iOS-Bugsnatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EF66F78294D7A48BBD7D8B77685305 /* iOS-Bugsnatch-dummy.m */; };
+		CA85795446A1AA0955E29CAE62C12ABC /* ApplicationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A5A5F8968C183FA807CD0C45B44DE4 /* ApplicationInfo.swift */; };
+		D2556086EAFB893191CCBD84C559475A /* ScreenshotTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D54F133A412E4B3E88B67058D419796 /* ScreenshotTaker.swift */; };
+		D67D92E25F8F6707B0DF14ADB49D2245 /* ProductiveConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05DD3666D4A4DEF013E28C2F9F563C /* ProductiveConfig.swift */; };
+		D6C5BDCE58BAFAA4DFD97E90E53BDA0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		DFD85FB0FBE7CF5409AEBF7093C6AD9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		FD29D30EB3A02492A48EC320C693D2C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,62 +40,62 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4262EAE71FE5386CEDC50A8C05910A24;
+			remoteGlobalIDString = 29A0B3A2DA1EB2F6DDF3FC8C97E69E59;
 			remoteInfo = "iOS-Bugsnatch";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0277A5A60978EE3419003C8B8615D0AD /* Pods-iOS-Bugsnatch_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS-Bugsnatch_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0D40A80BE007E31F0E41B107D5E98E52 /* iOS-Bugsnatch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "iOS-Bugsnatch.xcconfig"; sourceTree = "<group>"; };
+		06167CC2CDF99C53F5FCAD9068497867 /* Trigger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trigger.swift; path = "iOS-Bugsnatch/Classes/Core/Trigger.swift"; sourceTree = "<group>"; };
+		0C7A08FF7917BFD41ABB38D2BE5B78AF /* Pods_iOS_Bugsnatch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FD3F3FA4BB144627C6EC741BFF13F50 /* EmailManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmailManager.swift; path = "iOS-Bugsnatch/Classes/Email/EmailManager.swift"; sourceTree = "<group>"; };
+		19FDD4571AA0B6EEE2D79EE36B9ACBFF /* productiveScript.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = productiveScript.js; path = "iOS-Bugsnatch/Classes/Productive/productiveScript.js"; sourceTree = "<group>"; };
 		1EBA33A42FA52F847A8590557DFEC88A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		241882F5D45DED57DD84E93E4BAF97EB /* Pods-iOS-Bugsnatch_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-Bugsnatch_Example-frameworks.sh"; sourceTree = "<group>"; };
+		26CAAE0E629BEEE218605E01DB73EFB9 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		28A6054E7A07BEA3040A890198D2BF9D /* Pods-iOS-Bugsnatch_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOS-Bugsnatch_Tests-dummy.m"; sourceTree = "<group>"; };
+		28D4C38380B419EEB4C716ACC981AE96 /* EmailConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmailConfig.swift; path = "iOS-Bugsnatch/Classes/Email/EmailConfig.swift"; sourceTree = "<group>"; };
 		2CECE91EE36DFCE0BC0A6BFD8C0AB2EE /* Pods-iOS-Bugsnatch_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-Bugsnatch_Example-resources.sh"; sourceTree = "<group>"; };
+		2D54F133A412E4B3E88B67058D419796 /* ScreenshotTaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScreenshotTaker.swift; path = "iOS-Bugsnatch/Classes/Core/ScreenshotTaker.swift"; sourceTree = "<group>"; };
 		2FE6A20A3DF287DE2B79E6870B2525CB /* Pods-iOS-Bugsnatch_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		37EF66F78294D7A48BBD7D8B77685305 /* iOS-Bugsnatch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOS-Bugsnatch-dummy.m"; sourceTree = "<group>"; };
 		47E03F52379F8B2CF17C96F79CDE8F4B /* Pods-iOS-Bugsnatch_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOS-Bugsnatch_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		4959A75883DF121E633FFA7BBF37FA23 /* Bugsnatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bugsnatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7AAC533DB48480835EF783086046F9 /* Pods-iOS-Bugsnatch_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOS-Bugsnatch_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4E03D2D30480DA40FA8D1F4B5CBEF738 /* iOS-Bugsnatch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = "iOS-Bugsnatch.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5855177C73E420AA204D235A648112F2 /* iOS_Bugsnatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_Bugsnatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDC2ED288A39FDF3072EAB56C8A6DA5 /* iOS-Bugsnatch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "iOS-Bugsnatch.xcconfig"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5EFE62D4FE9E237D8C11EC026077360F /* Pods-iOS-Bugsnatch_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-Bugsnatch_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		611105C1CAD73B6B5D41AA9FF8B79AF3 /* Pods-iOS-Bugsnatch_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		68C14EE4E084AF5A7F85D533343461D5 /* Pods-iOS-Bugsnatch_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOS-Bugsnatch_Example-umbrella.h"; sourceTree = "<group>"; };
-		6C21B017B258A83C073F477660064DAB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FEB76990289B206C88BC01A51F4D481 /* Pods_iOS_Bugsnatch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		705E95413034D6E8D1D23D7F9546F0C6 /* Pods-iOS-Bugsnatch_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iOS-Bugsnatch_Example.modulemap"; sourceTree = "<group>"; };
-		81223E6EC27A8003344CE40138BA1A79 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		79E8E7E7905A282AA174F53A71D896FC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		84ECE4630D88FACA4E0A9D67C07267F2 /* Pods-iOS-Bugsnatch_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOS-Bugsnatch_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8A834B516841E7BBBC0873610E40F7D6 /* iOS-Bugsnatch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "iOS-Bugsnatch.modulemap"; sourceTree = "<group>"; };
+		8C93DB0DBA4C8AB014220D7821BBFDC8 /* Bugsnatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bugsnatch.swift; path = "iOS-Bugsnatch/Classes/Core/Bugsnatch.swift"; sourceTree = "<group>"; };
 		90F31C0841A20A075FFC2A12A454E69B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9562A83BBE8FC66471BF37AAA3AB56BC /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = "iOS-Bugsnatch/Classes/Core/Device.swift"; sourceTree = "<group>"; };
+		982A4A7ACFC1DF2F006B1B2527086F7F /* Pods_iOS_Bugsnatch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9859FDCB3A497522BED7556676DED0F0 /* Pods-iOS-Bugsnatch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		99A5A5F8968C183FA807CD0C45B44DE4 /* ApplicationInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApplicationInfo.swift; path = "iOS-Bugsnatch/Classes/Core/ApplicationInfo.swift"; sourceTree = "<group>"; };
 		9A6E1C2571885445F30158EB6539441F /* Pods-iOS-Bugsnatch_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOS-Bugsnatch_Example-dummy.m"; sourceTree = "<group>"; };
+		9B23E912FC11BB869100F00397FC9C27 /* iOS-Bugsnatch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Bugsnatch-umbrella.h"; sourceTree = "<group>"; };
+		9BC5DAE0FA04EFF8BF54B94E63055294 /* iOS-Bugsnatch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = "iOS-Bugsnatch.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F8274B289611E039DDBDD36A4D26D61 /* Pods-iOS-Bugsnatch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A19B93029614A64809390921944B3623 /* iOS-Bugsnatch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Bugsnatch-prefix.pch"; sourceTree = "<group>"; };
-		AD0226362271E7F3000990A8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		AD4F389B228ED3A900F82FA8 /* EmailConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfig.swift; sourceTree = "<group>"; };
-		AD4F389D228EDA5100F82FA8 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
-		AD4F389F228EDAD700F82FA8 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
-		ADAADC68225E2CC8005B0553 /* ProductiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductiveViewController.swift; sourceTree = "<group>"; };
-		ADAADC72225E4949005B0553 /* productiveScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = productiveScript.js; sourceTree = "<group>"; };
-		ADC5A07922707DB900BDDAA2 /* BugsnatchConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugsnatchConfig.swift; sourceTree = "<group>"; };
-		ADC5A07A22707DB900BDDAA2 /* ApplicationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationInfo.swift; sourceTree = "<group>"; };
-		ADC5A07B22707DB900BDDAA2 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
-		ADC5A07C22707DB900BDDAA2 /* ScreenshotTaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotTaker.swift; sourceTree = "<group>"; };
-		ADC5A07E22707DB900BDDAA2 /* Bool+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
-		ADC5A07F22707DB900BDDAA2 /* Bugsnatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bugsnatch.swift; sourceTree = "<group>"; };
-		ADC5A08022707DB900BDDAA2 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		ADEDFDA8228DA50600EA34C7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		ADEDFDAA228E9DD500EA34C7 /* ProductiveConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductiveConfig.swift; sourceTree = "<group>"; };
-		ADF04FB02271A53300887EEB /* EmailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailManager.swift; sourceTree = "<group>"; };
-		AFA4199902E194111A08CB4859F8DCDA /* Pods_iOS_Bugsnatch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Bugsnatch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD05CACE228EE6AF008A8B0A /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Bugsnatch+Extension.swift"; path = "iOS-Bugsnatch/Classes/Email/Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
+		AF05DD3666D4A4DEF013E28C2F9F563C /* ProductiveConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductiveConfig.swift; path = "iOS-Bugsnatch/Classes/Productive/ProductiveConfig.swift"; sourceTree = "<group>"; };
 		B04D7DE077ADAD341B4C000D528116FD /* Pods-iOS-Bugsnatch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS-Bugsnatch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BB2483AE671FB7BF1A3482EEF31EAD19 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "iOS-Bugsnatch/Classes/Productive/UIView+Extension.swift"; sourceTree = "<group>"; };
 		BCD67E81E894B46C0B41FE389839A687 /* Pods-iOS-Bugsnatch_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-Bugsnatch_Tests-resources.sh"; sourceTree = "<group>"; };
-		C5E7D3BBD08FF777C0DE82E5F9E6350A /* iOS-Bugsnatch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "iOS-Bugsnatch.modulemap"; sourceTree = "<group>"; };
+		BD21C6AD423D0034CDDAEF05B3BBBFFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEBC9806C1B4E370991FCC98BDD5C94A /* BugsnatchConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BugsnatchConfig.swift; path = "iOS-Bugsnatch/Classes/Core/BugsnatchConfig.swift"; sourceTree = "<group>"; };
+		C109FBBA108C2995B24D084D3462E2A3 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bugsnatch+Extension.swift"; path = "iOS-Bugsnatch/Classes/Productive/Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
+		C2270D2D018AA1886E98A4E248C01B8C /* iOS-Bugsnatch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Bugsnatch-prefix.pch"; sourceTree = "<group>"; };
 		D41426522125E4E474B2848C8A3FB687 /* Pods-iOS-Bugsnatch_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iOS-Bugsnatch_Tests.modulemap"; sourceTree = "<group>"; };
-		EEC830ACBF1F8600E19FC04517F059A3 /* iOS-Bugsnatch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Bugsnatch-umbrella.h"; sourceTree = "<group>"; };
-		F91B2BDCE5F45FB153769E4F24913FE7 /* iOS-Bugsnatch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOS-Bugsnatch-dummy.m"; sourceTree = "<group>"; };
-		FCA782A4F8D37FDE451EF8383AED100D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DE4AC1219D1ADEAC1E42C741930983FD /* ProductiveViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductiveViewController.swift; path = "iOS-Bugsnatch/Classes/Productive/ProductiveViewController.swift"; sourceTree = "<group>"; };
+		E2FFD4723FFFBE910C437F58F565FBBE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EA3D1FB1EB13CDD5A128FA322665B742 /* Bool+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +107,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1750AF39C6BAA297C808DB95CF4FE82D /* Frameworks */ = {
+		898628262D2F308F3A9402FD72DB93F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD29D30EB3A02492A48EC320C693D2C5 /* Foundation.framework in Frameworks */,
+				D6C5BDCE58BAFAA4DFD97E90E53BDA0B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +126,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05EB14E039C7183B0F885BA63443B66E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD21C6AD423D0034CDDAEF05B3BBBFFA /* Info.plist */,
+				8A834B516841E7BBBC0873610E40F7D6 /* iOS-Bugsnatch.modulemap */,
+				4CDC2ED288A39FDF3072EAB56C8A6DA5 /* iOS-Bugsnatch.xcconfig */,
+				37EF66F78294D7A48BBD7D8B77685305 /* iOS-Bugsnatch-dummy.m */,
+				C2270D2D018AA1886E98A4E248C01B8C /* iOS-Bugsnatch-prefix.pch */,
+				9B23E912FC11BB869100F00397FC9C27 /* iOS-Bugsnatch-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/iOS-Bugsnatch";
+			sourceTree = "<group>";
+		};
 		08A03DD6BE2763006DC22C9AFEA86DD3 /* Pods-iOS-Bugsnatch_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +156,47 @@
 			);
 			name = "Pods-iOS-Bugsnatch_Tests";
 			path = "Target Support Files/Pods-iOS-Bugsnatch_Tests";
+			sourceTree = "<group>";
+		};
+		40B54E39A64B553BA9FF0CE3BC63FD69 /* iOS-Bugsnatch */ = {
+			isa = PBXGroup;
+			children = (
+				7354D75EA2157B7D68EC3E55D0363102 /* Core */,
+				9F87573AAA6B9692541634BBA33F92BB /* Email */,
+				E3BA894B3D8CE698908D253BFA65FB75 /* Pod */,
+				E5883F30C6D280773B5771E1400BEC11 /* Productive */,
+				05EB14E039C7183B0F885BA63443B66E /* Support Files */,
+			);
+			name = "iOS-Bugsnatch";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		42FF407F35B91E8DE0C345FFD6418714 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4959A75883DF121E633FFA7BBF37FA23 /* Bugsnatch.framework */,
+				0C7A08FF7917BFD41ABB38D2BE5B78AF /* Pods_iOS_Bugsnatch_Example.framework */,
+				982A4A7ACFC1DF2F006B1B2527086F7F /* Pods_iOS_Bugsnatch_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		571DDA6F089047567B162638E2D82736 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA3D1FB1EB13CDD5A128FA322665B742 /* Bool+Extension.swift */,
+				26CAAE0E629BEEE218605E01DB73EFB9 /* UIViewController+Extension.swift */,
+			);
+			name = Extensions;
+			path = "iOS-Bugsnatch/Classes/Core/Extensions";
+			sourceTree = "<group>";
+		};
+		5C49F0EF77C9489E498DF45E739C18FF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40B54E39A64B553BA9FF0CE3BC63FD69 /* iOS-Bugsnatch */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
@@ -169,13 +225,27 @@
 			path = "Target Support Files/Pods-iOS-Bugsnatch_Example";
 			sourceTree = "<group>";
 		};
+		7354D75EA2157B7D68EC3E55D0363102 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				99A5A5F8968C183FA807CD0C45B44DE4 /* ApplicationInfo.swift */,
+				8C93DB0DBA4C8AB014220D7821BBFDC8 /* Bugsnatch.swift */,
+				BEBC9806C1B4E370991FCC98BDD5C94A /* BugsnatchConfig.swift */,
+				9562A83BBE8FC66471BF37AAA3AB56BC /* Device.swift */,
+				2D54F133A412E4B3E88B67058D419796 /* ScreenshotTaker.swift */,
+				06167CC2CDF99C53F5FCAD9068497867 /* Trigger.swift */,
+				571DDA6F089047567B162638E2D82736 /* Extensions */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				A8EB5F890EFDB9574623260852CC8D8C /* Development Pods */,
+				5C49F0EF77C9489E498DF45E739C18FF /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				94893587C9498C83C6DBEDAF1852B9EA /* Products */,
+				42FF407F35B91E8DE0C345FFD6418714 /* Products */,
 				82FFD951DC8227892A92717EE7A8F66F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -189,83 +259,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		94893587C9498C83C6DBEDAF1852B9EA /* Products */ = {
+		9F87573AAA6B9692541634BBA33F92BB /* Email */ = {
 			isa = PBXGroup;
 			children = (
-				5855177C73E420AA204D235A648112F2 /* iOS_Bugsnatch.framework */,
-				AFA4199902E194111A08CB4859F8DCDA /* Pods_iOS_Bugsnatch_Example.framework */,
-				6FEB76990289B206C88BC01A51F4D481 /* Pods_iOS_Bugsnatch_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A1F83046F2A25BE21A61773F48568AA0 /* iOS-Bugsnatch */ = {
-			isa = PBXGroup;
-			children = (
-				ADC5A08A22707EEB00BDDAA2 /* Email */,
-				ADC5A07822707DB900BDDAA2 /* Core */,
-				C7943F5789186FF0EE696DE2ABEA05AC /* Pod */,
-				F236B2C84A430F3E844042F42D3CEA6F /* Support Files */,
-				ADAADC66225E2CC8005B0553 /* Productive */,
-			);
-			name = "iOS-Bugsnatch";
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		A8EB5F890EFDB9574623260852CC8D8C /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A1F83046F2A25BE21A61773F48568AA0 /* iOS-Bugsnatch */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		ADAADC66225E2CC8005B0553 /* Productive */ = {
-			isa = PBXGroup;
-			children = (
-				AD4F389D228EDA5100F82FA8 /* Bugsnatch+Extension.swift */,
-				ADAADC72225E4949005B0553 /* productiveScript.js */,
-				ADAADC68225E2CC8005B0553 /* ProductiveViewController.swift */,
-				ADEDFDA8228DA50600EA34C7 /* UIView+Extension.swift */,
-				ADEDFDAA228E9DD500EA34C7 /* ProductiveConfig.swift */,
-			);
-			name = Productive;
-			path = "iOS-Bugsnatch/Classes/Productive";
-			sourceTree = "<group>";
-		};
-		ADC5A07822707DB900BDDAA2 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				ADC5A07922707DB900BDDAA2 /* BugsnatchConfig.swift */,
-				ADC5A07A22707DB900BDDAA2 /* ApplicationInfo.swift */,
-				ADC5A07B22707DB900BDDAA2 /* Trigger.swift */,
-				ADC5A07C22707DB900BDDAA2 /* ScreenshotTaker.swift */,
-				ADC5A07F22707DB900BDDAA2 /* Bugsnatch.swift */,
-				ADC5A08022707DB900BDDAA2 /* Device.swift */,
-				ADC5A07D22707DB900BDDAA2 /* Extensions */,
-			);
-			name = Core;
-			path = "iOS-Bugsnatch/Classes/Core";
-			sourceTree = "<group>";
-		};
-		ADC5A07D22707DB900BDDAA2 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				ADC5A07E22707DB900BDDAA2 /* Bool+Extension.swift */,
-				AD0226362271E7F3000990A8 /* UIViewController+Extension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		ADC5A08A22707EEB00BDDAA2 /* Email */ = {
-			isa = PBXGroup;
-			children = (
-				AD4F389F228EDAD700F82FA8 /* Bugsnatch+Extension.swift */,
-				ADF04FB02271A53300887EEB /* EmailManager.swift */,
-				AD4F389B228ED3A900F82FA8 /* EmailConfig.swift */,
+				AD05CACE228EE6AF008A8B0A /* Bugsnatch+Extension.swift */,
+				28D4C38380B419EEB4C716ACC981AE96 /* EmailConfig.swift */,
+				0FD3F3FA4BB144627C6EC741BFF13F50 /* EmailManager.swift */,
 			);
 			name = Email;
-			path = "iOS-Bugsnatch/Classes/Email";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -276,28 +277,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C7943F5789186FF0EE696DE2ABEA05AC /* Pod */ = {
+		E3BA894B3D8CE698908D253BFA65FB75 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				4E03D2D30480DA40FA8D1F4B5CBEF738 /* iOS-Bugsnatch.podspec */,
-				FCA782A4F8D37FDE451EF8383AED100D /* LICENSE */,
-				81223E6EC27A8003344CE40138BA1A79 /* README.md */,
+				9BC5DAE0FA04EFF8BF54B94E63055294 /* iOS-Bugsnatch.podspec */,
+				79E8E7E7905A282AA174F53A71D896FC /* LICENSE */,
+				E2FFD4723FFFBE910C437F58F565FBBE /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		F236B2C84A430F3E844042F42D3CEA6F /* Support Files */ = {
+		E5883F30C6D280773B5771E1400BEC11 /* Productive */ = {
 			isa = PBXGroup;
 			children = (
-				6C21B017B258A83C073F477660064DAB /* Info.plist */,
-				C5E7D3BBD08FF777C0DE82E5F9E6350A /* iOS-Bugsnatch.modulemap */,
-				0D40A80BE007E31F0E41B107D5E98E52 /* iOS-Bugsnatch.xcconfig */,
-				F91B2BDCE5F45FB153769E4F24913FE7 /* iOS-Bugsnatch-dummy.m */,
-				A19B93029614A64809390921944B3623 /* iOS-Bugsnatch-prefix.pch */,
-				EEC830ACBF1F8600E19FC04517F059A3 /* iOS-Bugsnatch-umbrella.h */,
+				C109FBBA108C2995B24D084D3462E2A3 /* Bugsnatch+Extension.swift */,
+				AF05DD3666D4A4DEF013E28C2F9F563C /* ProductiveConfig.swift */,
+				19FDD4571AA0B6EEE2D79EE36B9ACBFF /* productiveScript.js */,
+				DE4AC1219D1ADEAC1E42C741930983FD /* ProductiveViewController.swift */,
+				BB2483AE671FB7BF1A3482EEF31EAD19 /* UIView+Extension.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/iOS-Bugsnatch";
+			name = Productive;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,11 +318,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D441B6B07267FDDD3ACC980C59C5814 /* Headers */ = {
+		BC35739F205D9DF2B163EC79EA5AF651 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3048604C59FB6510383998167AFEFCF7 /* iOS-Bugsnatch-umbrella.h in Headers */,
+				5EC231E204D6AB8B02F03A20D22D614F /* iOS-Bugsnatch-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,17 +345,17 @@
 			);
 			name = "Pods-iOS-Bugsnatch_Example";
 			productName = "Pods-iOS-Bugsnatch_Example";
-			productReference = AFA4199902E194111A08CB4859F8DCDA /* Pods_iOS_Bugsnatch_Example.framework */;
+			productReference = 0C7A08FF7917BFD41ABB38D2BE5B78AF /* Pods_iOS_Bugsnatch_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4262EAE71FE5386CEDC50A8C05910A24 /* iOS-Bugsnatch */ = {
+		29A0B3A2DA1EB2F6DDF3FC8C97E69E59 /* iOS-Bugsnatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56DBCF198775A189DBB6D1831923D349 /* Build configuration list for PBXNativeTarget "iOS-Bugsnatch" */;
+			buildConfigurationList = 82BF052F5A8ADA83D838B345066617B4 /* Build configuration list for PBXNativeTarget "iOS-Bugsnatch" */;
 			buildPhases = (
-				4D441B6B07267FDDD3ACC980C59C5814 /* Headers */,
-				3CCC3E7589A84593FD75771B9E9AA7E7 /* Sources */,
-				1750AF39C6BAA297C808DB95CF4FE82D /* Frameworks */,
-				984C54B3390B68DAD6135949C808316B /* Resources */,
+				BC35739F205D9DF2B163EC79EA5AF651 /* Headers */,
+				058BF18E6B875CC5426C461A31E99A20 /* Sources */,
+				898628262D2F308F3A9402FD72DB93F9 /* Frameworks */,
+				6AD859C099B86477FDA6604DC1E79329 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -364,7 +363,7 @@
 			);
 			name = "iOS-Bugsnatch";
 			productName = "iOS-Bugsnatch";
-			productReference = 5855177C73E420AA204D235A648112F2 /* iOS_Bugsnatch.framework */;
+			productReference = 4959A75883DF121E633FFA7BBF37FA23 /* Bugsnatch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F1286B186E79BD8504FF013ACCD487EF /* Pods-iOS-Bugsnatch_Tests */ = {
@@ -382,7 +381,7 @@
 			);
 			name = "Pods-iOS-Bugsnatch_Tests";
 			productName = "Pods-iOS-Bugsnatch_Tests";
-			productReference = 6FEB76990289B206C88BC01A51F4D481 /* Pods_iOS_Bugsnatch_Tests.framework */;
+			productReference = 982A4A7ACFC1DF2F006B1B2527086F7F /* Pods_iOS_Bugsnatch_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -393,11 +392,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					4262EAE71FE5386CEDC50A8C05910A24 = {
-						LastSwiftMigration = 1010;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -408,11 +402,11 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 94893587C9498C83C6DBEDAF1852B9EA /* Products */;
+			productRefGroup = 42FF407F35B91E8DE0C345FFD6418714 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4262EAE71FE5386CEDC50A8C05910A24 /* iOS-Bugsnatch */,
+				29A0B3A2DA1EB2F6DDF3FC8C97E69E59 /* iOS-Bugsnatch */,
 				017CDC189E4F3D568A2E9B948AE1B564 /* Pods-iOS-Bugsnatch_Example */,
 				F1286B186E79BD8504FF013ACCD487EF /* Pods-iOS-Bugsnatch_Tests */,
 			);
@@ -427,11 +421,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		984C54B3390B68DAD6135949C808316B /* Resources */ = {
+		6AD859C099B86477FDA6604DC1E79329 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADAADC73225E494A005B0553 /* productiveScript.js in Resources */,
+				AD05CACD228EE5E5008A8B0A /* productiveScript.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,26 +439,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3CCC3E7589A84593FD75771B9E9AA7E7 /* Sources */ = {
+		058BF18E6B875CC5426C461A31E99A20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD4F389C228ED3A900F82FA8 /* EmailConfig.swift in Sources */,
-				ADC5A08222707DB900BDDAA2 /* ApplicationInfo.swift in Sources */,
-				ADEDFDA9228DA50600EA34C7 /* UIView+Extension.swift in Sources */,
-				AD0226372271E7F3000990A8 /* UIViewController+Extension.swift in Sources */,
-				ADC5A08622707DB900BDDAA2 /* Bugsnatch.swift in Sources */,
-				ADEDFDAB228E9DD500EA34C7 /* ProductiveConfig.swift in Sources */,
-				ADAADC6A225E2CC9005B0553 /* ProductiveViewController.swift in Sources */,
-				ADC5A08722707DB900BDDAA2 /* Device.swift in Sources */,
-				ADF04FB12271A53300887EEB /* EmailManager.swift in Sources */,
-				ADC5A08522707DB900BDDAA2 /* Bool+Extension.swift in Sources */,
-				C13D1B51E80548E1BBB0AB7C346A6742 /* iOS-Bugsnatch-dummy.m in Sources */,
-				AD4F38A0228EDAD700F82FA8 /* Bugsnatch+Extension.swift in Sources */,
-				ADC5A08422707DB900BDDAA2 /* ScreenshotTaker.swift in Sources */,
-				ADC5A08322707DB900BDDAA2 /* Trigger.swift in Sources */,
-				ADC5A08122707DB900BDDAA2 /* BugsnatchConfig.swift in Sources */,
-				AD4F389E228EDA5100F82FA8 /* Bugsnatch+Extension.swift in Sources */,
+				CA85795446A1AA0955E29CAE62C12ABC /* ApplicationInfo.swift in Sources */,
+				05C8908609CA3B08BBE8D4A0ED0517AF /* Bool+Extension.swift in Sources */,
+				7CFE91BFD9CB1B29AD2AF173F0DC2E4C /* Bugsnatch+Extension.swift in Sources */,
+				202014F79E33BE8B9159857150722F24 /* Bugsnatch.swift in Sources */,
+				57EA9B874D046B8398A0448026F01740 /* BugsnatchConfig.swift in Sources */,
+				BCA7EE57ADF6DE9248FB035EEE1F2FC9 /* Device.swift in Sources */,
+				AD05CACF228EE6AF008A8B0A /* Bugsnatch+Extension.swift in Sources */,
+				55EE9909FF440A281B613530948D3F80 /* EmailConfig.swift in Sources */,
+				4BDE4105E70DA53BD3FBE9A32C458BC8 /* EmailManager.swift in Sources */,
+				C7547C29AFC81A854680B36A6D1DA798 /* iOS-Bugsnatch-dummy.m in Sources */,
+				D67D92E25F8F6707B0DF14ADB49D2245 /* ProductiveConfig.swift in Sources */,
+				C1CD77EA5E274360782012921228810B /* productiveScript.js in Sources */,
+				698CB23F8B3EE1074E51D0EBE8A65A82 /* ProductiveViewController.swift in Sources */,
+				D2556086EAFB893191CCBD84C559475A /* ScreenshotTaker.swift in Sources */,
+				A91AC55AAD0A0599E947148DCCB701C9 /* Trigger.swift in Sources */,
+				9DF84F9BE2BF98CD78AC263236F2C0CC /* UIView+Extension.swift in Sources */,
+				4DB37B097DE9FEF75BDFCA9410B44DC6 /* UIViewController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,45 +485,12 @@
 		1B381CD6134CF55E7468974EBDC32734 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "iOS-Bugsnatch";
-			target = 4262EAE71FE5386CEDC50A8C05910A24 /* iOS-Bugsnatch */;
+			target = 29A0B3A2DA1EB2F6DDF3FC8C97E69E59 /* iOS-Bugsnatch */;
 			targetProxy = FB725954BCA07A75194DACA408CB1928 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1753E511ED17A0F6ED1A7A30D59E5CC8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D40A80BE007E31F0E41B107D5E98E52 /* iOS-Bugsnatch.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iOS-Bugsnatch/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch.modulemap";
-				PRODUCT_NAME = iOS_Bugsnatch;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		6332CAA1A94756E415C0FB58AB5BA293 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 611105C1CAD73B6B5D41AA9FF8B79AF3 /* Pods-iOS-Bugsnatch_Tests.debug.xcconfig */;
@@ -555,38 +517,6 @@
 				PRODUCT_NAME = Pods_iOS_Bugsnatch_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6346957A66242F864FE871CDB0D7175A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D40A80BE007E31F0E41B107D5E98E52 /* iOS-Bugsnatch.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iOS-Bugsnatch/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch.modulemap";
-				PRODUCT_NAME = iOS_Bugsnatch;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -689,6 +619,69 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		B503DF1DD8FA28F47367D47B5A0AC5D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CDC2ED288A39FDF3072EAB56C8A6DA5 /* iOS-Bugsnatch.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOS-Bugsnatch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch.modulemap";
+				PRODUCT_NAME = Bugsnatch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9F9C2DF385AAC73132FF9018FCCF75C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CDC2ED288A39FDF3072EAB56C8A6DA5 /* iOS-Bugsnatch.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOS-Bugsnatch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch.modulemap";
+				PRODUCT_NAME = Bugsnatch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		BBF697CCDC5327D3346CDD1AA82C8AC3 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -829,15 +822,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56DBCF198775A189DBB6D1831923D349 /* Build configuration list for PBXNativeTarget "iOS-Bugsnatch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6346957A66242F864FE871CDB0D7175A /* Debug */,
-				1753E511ED17A0F6ED1A7A30D59E5CC8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		66842567427F58EDFBFFA7AE10721326 /* Build configuration list for PBXNativeTarget "Pods-iOS-Bugsnatch_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -852,6 +836,15 @@
 			buildConfigurations = (
 				D0856DCDF7296DB90848B178619924D0 /* Debug */,
 				F6CC32EBC31D1A37B6F1519C5F070E53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82BF052F5A8ADA83D838B345066617B4 /* Build configuration list for PBXNativeTarget "iOS-Bugsnatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B503DF1DD8FA28F47367D47B5A0AC5D1 /* Debug */,
+				B9F9C2DF385AAC73132FF9018FCCF75C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

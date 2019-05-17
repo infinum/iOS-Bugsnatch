@@ -292,11 +292,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-Bugsnatch_Example/Pods-iOS-Bugsnatch_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/iOS-Bugsnatch/iOS_Bugsnatch.framework",
+				"${BUILT_PRODUCTS_DIR}/iOS-Bugsnatch/Bugsnatch.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOS_Bugsnatch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bugsnatch.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

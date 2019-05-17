@@ -30,6 +30,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.3'
   s.swift_version = '5.0'
 
+  s.module_name = 'Bugsnatch'
   s.default_subspec = 'Email'
 
   s.subspec 'Core' do |sp|

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import iOS_Bugsnatch
+import Bugsnatch
 
 class ViewController: UIViewController {
 

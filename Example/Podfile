@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'iOS-Bugsnatch_Example' do
   pod 'iOS-Bugsnatch/Email', :path => '../'
+  pod 'iOS-Bugsnatch/Productive', :path => '../'
 
   target 'iOS-Bugsnatch_Tests' do
     inherit! :search_paths
