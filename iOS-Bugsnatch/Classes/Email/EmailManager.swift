@@ -14,9 +14,9 @@ public class EmailManager: NSObject {
 
     public static let shared = EmailManager()
 
-    public func sendDebugEmail() {
+    public func sendDebugEmail(with config: EmailConfig) {
         guard MFMailComposeViewController.canSendMail() else {
-            print("Mail services are not available")
+            _showMailServiceNotAvailableAlert(with: config)
             return
         }
 
@@ -36,6 +36,21 @@ public class EmailManager: NSObject {
 
         let rootViewController = UIApplication.shared.keyWindow?.rootViewController
         rootViewController?.presentViewControllerFromVisibleViewController(viewControllerToPresent: mailComposeVC, animated: true)
+    }
+
+    // MARK: - Private methods -
+
+    private func _showMailServiceNotAvailableAlert(with config: EmailConfig) {
+        let alertController = UIAlertController(
+            title: config.localization.mailServiceAlert.title,
+            message: config.localization.mailServiceAlert.description,
+            preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: config.localization.mailServiceAlert.ok, style: .default)
+        alertController.addAction(okAction)
+
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        rootViewController?.presentViewControllerFromVisibleViewController(viewControllerToPresent: alertController, animated: true)
     }
 }
 

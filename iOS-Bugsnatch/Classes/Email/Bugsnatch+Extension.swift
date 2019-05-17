@@ -10,6 +10,7 @@ import Foundation
 extension Bugsnatch: TriggerDelegate {
 
     public func didTrigger() {
-        EmailManager.shared.sendDebugEmail()
+        guard let emailConfig = config?.triggerActionConfig as? EmailConfig else { return }
+        EmailManager.shared.sendDebugEmail(with: emailConfig)
     }
 }

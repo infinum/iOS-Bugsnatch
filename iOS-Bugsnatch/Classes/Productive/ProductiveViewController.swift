@@ -131,7 +131,6 @@ final class ProductiveViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-
     private func _showSomethingWentWrongAlert() {
         let alertController = UIAlertController(
             title: _config.localization.somethingWentWrongAlert.title,
@@ -143,8 +142,8 @@ final class ProductiveViewController: UIViewController {
         }
 
         alertController.addAction(okAction)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
 
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
             self?.present(alertController, animated: true, completion: nil)
         }
     }
