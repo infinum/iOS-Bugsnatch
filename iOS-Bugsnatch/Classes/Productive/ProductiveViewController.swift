@@ -8,65 +8,76 @@
 import UIKit
 import WebKit
 
-public struct ProductiveConfig: TriggerActionConfig {
-    var organizationId: String
-    var projectId: Int
-
-    public init(organizationId: String, projectId: Int) {
-        self.organizationId = organizationId
-        self.projectId = projectId
-    }
-}
-
-class ProductiveViewController: UIViewController {
-
-    // MARK: - IBOutlets -
-
-    @IBOutlet weak var webViewContainer: UIView!
+final class ProductiveViewController: UIViewController {
 
     // MARK: - Public properties -
 
     static let identifier = String(describing: ProductiveViewController.self)
-    public var config: ProductiveConfig?
+
+    // MARK: - Private properties -
+
+    private var _config: ProductiveConfig
+    private var webViewContainerView: UIView = UIView()
 
     // MARK: - Lifecycle -
 
+    init(with config: ProductiveConfig) {
+        self._config = config
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        _setupLayout()
         _setupWebView()
     }
 
     static func present(with config: TriggerActionConfig?) {
-        let bugsnatchBundle = Bundle(for: ProductiveViewController.self)
-        let storyboard = UIStoryboard(name: identifier, bundle: bugsnatchBundle)
+        guard let productiveConfig = config as? ProductiveConfig else { return }
 
-        guard
-            let productiveConfig = config as? ProductiveConfig,
-            let productiveViewController = storyboard.instantiateViewController(withIdentifier: identifier) as? ProductiveViewController
-            else { return }
-
-        productiveViewController.config = productiveConfig
+        let productiveViewController = ProductiveViewController(with: productiveConfig)
         let rootViewController = UIApplication.shared.keyWindow?.rootViewController
         rootViewController?.presentViewControllerFromVisibleViewController(viewControllerToPresent: productiveViewController, animated: true)
     }
 
-    // MARK: - IBActions -
-
-    @IBAction private func _closeButtonActionHandler() {
-        dismiss(animated: true)
-    }
-
     // MARK: - Private methods -
+
+    private func _setupLayout() {
+        view.backgroundColor = .white
+
+        let closeButton = UIButton()
+        closeButton.setTitle(_config.localization.closeButton, for: .normal)
+        closeButton.setTitleColor(.black, for: .normal)
+        closeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        closeButton.addTarget(self, action: #selector(_doneButtonActionHandler), for: .touchUpInside)
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(closeButton)
+        NSLayoutConstraint.activate([
+            closeButton.topAnchor.constraint(equalTo: view.safeTopAnchor),
+            closeButton.leftAnchor.constraint(equalTo: view.safeLeftAnchor, constant: 16),
+        ])
+
+        webViewContainerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(webViewContainerView)
+        NSLayoutConstraint.activate([
+            webViewContainerView.topAnchor.constraint(equalTo: closeButton.bottomAnchor),
+            webViewContainerView.rightAnchor.constraint(equalTo: view.safeRightAnchor),
+            webViewContainerView.leftAnchor.constraint(equalTo: view.safeLeftAnchor),
+            webViewContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
 
     private func _setupWebView() {
         guard
-            let organizationId = config?.organizationId,
-            let projectId = config?.projectId,
-            let url = URL(string: "https://app.productive.io/\(organizationId)/projects/\(projectId)/tasks/new"),
+            let url = URL(string: "https://app.productive.io/\(_config.organizationId)/projects/\(_config.projectId)/tasks/new"),
             let productiveScriptSource = _productiveScriptSource
-            else {
-                _showSomethingWentWrongAlert()
-                return
+        else {
+            _showSomethingWentWrongAlert()
+            return
         }
 
         let script = WKUserScript(source: productiveScriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
@@ -81,11 +92,12 @@ class ProductiveViewController: UIViewController {
         configuration.preferences = preferences
         configuration.userContentController = contentController
 
-        let customFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: 0.0, height: webViewContainer.frame.size.height))
-        let webView = WKWebView(frame: customFrame, configuration: configuration)
+        let customFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: 0.0, height: webViewContainerView.frame.size.height))
+        let webView = FullScreenWKWebView(frame: customFrame, configuration: configuration)
 
+        webView.scrollView.isScrollEnabled = false
         webView.navigationDelegate = self
-        webView.embed(in: webViewContainer)
+        webView.embed(in: webViewContainerView)
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }
@@ -102,12 +114,15 @@ class ProductiveViewController: UIViewController {
     }
 
     private func _showRetryAlert(with error: Error) {
-        let alertController = UIAlertController(title: "Oops", message: error.localizedDescription, preferredStyle: .alert)
+        let alertController = UIAlertController(
+            title: _config.localization.retryAlert.title,
+            message: _config.localization.retryAlert.description ?? error.localizedDescription,
+            preferredStyle: .alert)
 
-        let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] (_) in
+        let retryAction = UIAlertAction(title: _config.localization.retryAlert.retry, style: .default) { [weak self] (_) in
             self?._setupWebView()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [weak self] (_) in
+        let cancelAction = UIAlertAction(title: _config.localization.retryAlert.cancel, style: .cancel) { [weak self] (_) in
             self?.dismiss(animated: true)
         }
 
@@ -118,9 +133,12 @@ class ProductiveViewController: UIViewController {
 
 
     private func _showSomethingWentWrongAlert() {
-        let alertController = UIAlertController(title: "Oops", message: "Something went wrong, please contact developers", preferredStyle: .alert)
+        let alertController = UIAlertController(
+            title: _config.localization.somethingWentWrongAlert.title,
+            message: _config.localization.somethingWentWrongAlert.description,
+            preferredStyle: .alert)
 
-        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] (_) in
+        let okAction = UIAlertAction(title: _config.localization.somethingWentWrongAlert.ok, style: .default) { [weak self] (_) in
             self?.dismiss(animated: true)
         }
 
@@ -129,6 +147,10 @@ class ProductiveViewController: UIViewController {
 
             self?.present(alertController, animated: true, completion: nil)
         }
+    }
+
+    @objc private func _doneButtonActionHandler() {
+        dismiss(animated: true)
     }
 }
 
@@ -148,8 +170,14 @@ fileprivate extension WKWebView {
             topAnchor.constraint(equalTo: containerView.topAnchor),
             rightAnchor.constraint(equalTo: containerView.rightAnchor),
             leftAnchor.constraint(equalTo: containerView.leftAnchor),
-            bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-            heightAnchor.constraint(equalTo: containerView.heightAnchor)
-            ])
+            bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+        ])
+    }
+}
+
+fileprivate class FullScreenWKWebView: WKWebView {
+
+    override var safeAreaInsets: UIEdgeInsets {
+        return UIEdgeInsets.zero
     }
 }
