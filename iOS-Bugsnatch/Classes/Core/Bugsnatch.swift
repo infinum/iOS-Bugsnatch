@@ -16,14 +16,6 @@ public final class Bugsnatch {
     public static let shared = Bugsnatch()
     var config: BugsnatchConfig?
 
-    private var _trigger: Triggerable?
-
-    public func setup(config: BugsnatchConfig, triggerActionConfig: TriggerActionConfig? = nil) {
-        self.config = config
-        _trigger = config.trigger
-        _trigger?.delegate = self
-    }
-
     public var bugTitle: String {
         guard let applicationName = ApplicationInfo.appName else { return "Bug report" }
         let postfix = config?.localization.titlePostfix ?? "bug report"
@@ -35,13 +27,16 @@ public final class Bugsnatch {
             ApplicationInfo.appInfo,
             _deviceNameRow,
             _systemVersionRow,
-            config?.shouldShowDeviceOrientation.mapTrue(to: _deviceOrientationRow)
-            ]
+            config?.shouldShowDeviceOrientation.mapTrue(to: _deviceOrientationRow),
+            config?.extraDebugInfo
+        ]
             .compactMap { $0 }
             .joined(separator: "\n")
     }
 
-    // MARK: - Private
+    // MARK: - Private properties -
+
+    private var _trigger: Triggerable?
 
     private var _deviceNameRow: String {
         let rowName = config?.localization.device ?? "Device"
@@ -71,5 +66,17 @@ public final class Bugsnatch {
         case .landscapeRight:
             return "landscapeRight"
         }
+    }
+
+    // MARK: - Public methods -
+
+    public func setup(config: BugsnatchConfig, triggerActionConfig: TriggerActionConfig? = nil) {
+        self.config = config
+        _trigger = config.trigger
+        _trigger?.delegate = self
+    }
+
+    public func updateExtraDebugInfo(with extraDebugInfo: String) {
+        config?.extraDebugInfo = extraDebugInfo
     }
 }

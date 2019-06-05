@@ -13,17 +13,20 @@ public struct BugsnatchConfig {
     let shouldShowDeviceOrientation: Bool
     let triggerActionConfig: TriggerActionConfig?
     let localization: BugsnatchLocalizationConfig
+    var extraDebugInfo: String?
 
     public init(
         trigger: Triggerable,
         shouldShowDeviceOrientation: Bool = false,
         triggerActionConfig: TriggerActionConfig? = nil,
-        localization: BugsnatchLocalizationConfig = BugsnatchLocalizationConfig()
+        localization: BugsnatchLocalizationConfig = BugsnatchLocalizationConfig(),
+        extraDebugInfo: String? = nil
     ) {
         self.trigger = trigger
         self.shouldShowDeviceOrientation = shouldShowDeviceOrientation
         self.triggerActionConfig = triggerActionConfig
         self.localization = localization
+        self.extraDebugInfo = extraDebugInfo
     }
 }
 
