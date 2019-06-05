@@ -9,11 +9,11 @@ import UIKit
 
 extension UIView {
 
-    var safeTopAnchor: NSLayoutYAxisAnchor {
+    var safeTopAnchor: NSLayoutYAxisAnchor? {
         if #available(iOS 11.0, *) {
             return self.safeAreaLayoutGuide.topAnchor
         }
-        return self.topAnchor
+        return nil
     }
 
     var safeLeftAnchor: NSLayoutXAxisAnchor {
@@ -28,12 +28,5 @@ extension UIView {
             return self.safeAreaLayoutGuide.rightAnchor
         }
         return self.rightAnchor
-    }
-
-    var safeBottomAnchor: NSLayoutYAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return self.safeAreaLayoutGuide.bottomAnchor
-        }
-        return self.bottomAnchor
     }
 }

@@ -17,7 +17,7 @@ final class ProductiveViewController: UIViewController {
     // MARK: - Private properties -
 
     private var _config: ProductiveConfig
-    private var webViewContainerView: UIView = UIView()
+    private var _webViewContainerView: UIView = UIView()
 
     // MARK: - Lifecycle -
 
@@ -56,19 +56,21 @@ final class ProductiveViewController: UIViewController {
         closeButton.addTarget(self, action: #selector(_doneButtonActionHandler), for: .touchUpInside)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(closeButton)
+        let topConstraintConstant: CGFloat = view.safeTopAnchor == nil ? UIApplication.shared.statusBarFrame.height : 0
         NSLayoutConstraint.activate([
-            closeButton.topAnchor.constraint(equalTo: view.safeTopAnchor),
+            closeButton.topAnchor.constraint(equalTo: view.safeTopAnchor ?? topLayoutGuide.topAnchor, constant: topConstraintConstant),
             closeButton.leftAnchor.constraint(equalTo: view.safeLeftAnchor, constant: 16),
         ])
 
-        webViewContainerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(webViewContainerView)
+        _webViewContainerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(_webViewContainerView)
         NSLayoutConstraint.activate([
-            webViewContainerView.topAnchor.constraint(equalTo: closeButton.bottomAnchor),
-            webViewContainerView.rightAnchor.constraint(equalTo: view.safeRightAnchor),
-            webViewContainerView.leftAnchor.constraint(equalTo: view.safeLeftAnchor),
-            webViewContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            _webViewContainerView.topAnchor.constraint(equalTo: closeButton.bottomAnchor),
+            _webViewContainerView.rightAnchor.constraint(equalTo: view.safeRightAnchor),
+            _webViewContainerView.leftAnchor.constraint(equalTo: view.safeLeftAnchor),
+            _webViewContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        view.layoutIfNeeded()
     }
 
     private func _setupWebView() {
@@ -92,12 +94,12 @@ final class ProductiveViewController: UIViewController {
         configuration.preferences = preferences
         configuration.userContentController = contentController
 
-        let customFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: 0.0, height: webViewContainerView.frame.size.height))
+        let customFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: 0.0, height: _webViewContainerView.frame.size.height))
         let webView = FullScreenWKWebView(frame: customFrame, configuration: configuration)
 
         webView.scrollView.isScrollEnabled = false
         webView.navigationDelegate = self
-        webView.embed(in: webViewContainerView)
+        webView.embed(in: _webViewContainerView)
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }
@@ -119,10 +121,10 @@ final class ProductiveViewController: UIViewController {
             message: _config.localization.retryAlert.description ?? error.localizedDescription,
             preferredStyle: .alert)
 
-        let retryAction = UIAlertAction(title: _config.localization.retryAlert.retry, style: .default) { [weak self] (_) in
+        let retryAction = UIAlertAction(title: _config.localization.retryAlert.retry, style: .default) { [weak self] _ in
             self?._setupWebView()
         }
-        let cancelAction = UIAlertAction(title: _config.localization.retryAlert.cancel, style: .cancel) { [weak self] (_) in
+        let cancelAction = UIAlertAction(title: _config.localization.retryAlert.cancel, style: .cancel) { [weak self] _ in
             self?.dismiss(animated: true)
         }
 

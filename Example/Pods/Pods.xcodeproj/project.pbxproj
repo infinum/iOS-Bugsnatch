@@ -24,7 +24,7 @@
 		A91AC55AAD0A0599E947148DCCB701C9 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06167CC2CDF99C53F5FCAD9068497867 /* Trigger.swift */; };
 		AA9FBB14EE496758B95F427EEAE714BF /* Pods-iOS-Bugsnatch_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84ECE4630D88FACA4E0A9D67C07267F2 /* Pods-iOS-Bugsnatch_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD05CACD228EE5E5008A8B0A /* productiveScript.js in Resources */ = {isa = PBXBuildFile; fileRef = 19FDD4571AA0B6EEE2D79EE36B9ACBFF /* productiveScript.js */; };
-		AD05CACF228EE6AF008A8B0A /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05CACE228EE6AF008A8B0A /* Bugsnatch+Extension.swift */; };
+		AD692E1A22A7F5AB00469FA2 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD692E1922A7F5AA00469FA2 /* Bugsnatch+Extension.swift */; };
 		BCA7EE57ADF6DE9248FB035EEE1F2FC9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562A83BBE8FC66471BF37AAA3AB56BC /* Device.swift */; };
 		C1CD77EA5E274360782012921228810B /* productiveScript.js in Sources */ = {isa = PBXBuildFile; fileRef = 19FDD4571AA0B6EEE2D79EE36B9ACBFF /* productiveScript.js */; };
 		C7547C29AFC81A854680B36A6D1DA798 /* iOS-Bugsnatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EF66F78294D7A48BBD7D8B77685305 /* iOS-Bugsnatch-dummy.m */; };
@@ -83,7 +83,7 @@
 		9B23E912FC11BB869100F00397FC9C27 /* iOS-Bugsnatch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Bugsnatch-umbrella.h"; sourceTree = "<group>"; };
 		9BC5DAE0FA04EFF8BF54B94E63055294 /* iOS-Bugsnatch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = "iOS-Bugsnatch.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F8274B289611E039DDBDD36A4D26D61 /* Pods-iOS-Bugsnatch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Bugsnatch_Example.release.xcconfig"; sourceTree = "<group>"; };
-		AD05CACE228EE6AF008A8B0A /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Bugsnatch+Extension.swift"; path = "iOS-Bugsnatch/Classes/Email/Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
+		AD692E1922A7F5AA00469FA2 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Bugsnatch+Extension.swift"; path = "iOS-Bugsnatch/Classes/Email/Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
 		AF05DD3666D4A4DEF013E28C2F9F563C /* ProductiveConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductiveConfig.swift; path = "iOS-Bugsnatch/Classes/Productive/ProductiveConfig.swift"; sourceTree = "<group>"; };
 		B04D7DE077ADAD341B4C000D528116FD /* Pods-iOS-Bugsnatch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS-Bugsnatch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BB2483AE671FB7BF1A3482EEF31EAD19 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "iOS-Bugsnatch/Classes/Productive/UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 		9F87573AAA6B9692541634BBA33F92BB /* Email */ = {
 			isa = PBXGroup;
 			children = (
-				AD05CACE228EE6AF008A8B0A /* Bugsnatch+Extension.swift */,
+				AD692E1922A7F5AA00469FA2 /* Bugsnatch+Extension.swift */,
 				28D4C38380B419EEB4C716ACC981AE96 /* EmailConfig.swift */,
 				0FD3F3FA4BB144627C6EC741BFF13F50 /* EmailManager.swift */,
 			);
@@ -449,7 +449,7 @@
 				202014F79E33BE8B9159857150722F24 /* Bugsnatch.swift in Sources */,
 				57EA9B874D046B8398A0448026F01740 /* BugsnatchConfig.swift in Sources */,
 				BCA7EE57ADF6DE9248FB035EEE1F2FC9 /* Device.swift in Sources */,
-				AD05CACF228EE6AF008A8B0A /* Bugsnatch+Extension.swift in Sources */,
+				AD692E1A22A7F5AB00469FA2 /* Bugsnatch+Extension.swift in Sources */,
 				55EE9909FF440A281B613530948D3F80 /* EmailConfig.swift in Sources */,
 				4BDE4105E70DA53BD3FBE9A32C458BC8 /* EmailManager.swift in Sources */,
 				C7547C29AFC81A854680B36A6D1DA798 /* iOS-Bugsnatch-dummy.m in Sources */,
@@ -506,7 +506,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-iOS-Bugsnatch_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-iOS-Bugsnatch_Tests/Pods-iOS-Bugsnatch_Tests.modulemap";
@@ -538,7 +538,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-iOS-Bugsnatch_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-iOS-Bugsnatch_Tests/Pods-iOS-Bugsnatch_Tests.modulemap";
@@ -608,7 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -636,7 +636,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/iOS-Bugsnatch/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch.modulemap";
 				PRODUCT_NAME = Bugsnatch;
@@ -667,7 +667,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/iOS-Bugsnatch/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/iOS-Bugsnatch/iOS-Bugsnatch.modulemap";
 				PRODUCT_NAME = Bugsnatch;
@@ -732,7 +732,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -757,7 +757,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-iOS-Bugsnatch_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-iOS-Bugsnatch_Example/Pods-iOS-Bugsnatch_Example.modulemap";
@@ -791,7 +791,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-iOS-Bugsnatch_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-iOS-Bugsnatch_Example/Pods-iOS-Bugsnatch_Example.modulemap";

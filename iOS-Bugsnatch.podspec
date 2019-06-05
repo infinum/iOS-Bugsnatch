@@ -27,7 +27,7 @@ TODO: Add long description of the pod here.
   s.author           = { 'Damjan Dabo' => 'damjan.dabo@infinum.hr' }
   s.source           = { :git => 'https://github.com/infinum/iOS-Bugsnatch.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.3'
+  s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
 
   s.module_name = 'Bugsnatch'
