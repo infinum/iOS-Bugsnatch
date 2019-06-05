@@ -8,9 +8,9 @@
 import Foundation
 
 public struct ProductiveConfig: TriggerActionConfig {
-    var organizationId: String
-    var projectId: Int
-    var localization: ProductiveLocalizationConfig
+    let organizationId: String
+    let projectId: Int
+    let localization: ProductiveLocalizationConfig
 
     public init(organizationId: String, projectId: Int, localization: ProductiveLocalizationConfig = ProductiveLocalizationConfig()) {
         self.organizationId = organizationId
@@ -21,9 +21,9 @@ public struct ProductiveConfig: TriggerActionConfig {
 
 public struct ProductiveLocalizationConfig {
 
-    var closeButton: String
-    var retryAlert: RetryAlertConfig
-    var somethingWentWrongAlert: SomethingWentWrongAlertConfig
+    let closeButton: String
+    let retryAlert: RetryAlertConfig
+    let somethingWentWrongAlert: SomethingWentWrongAlertConfig
 
     public init(
         closeButton: String = "Close",

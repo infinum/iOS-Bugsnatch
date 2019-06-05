@@ -13,6 +13,10 @@ public struct ApplicationInfo {
         return Bundle.main
     }
 
+    static private var _localization: BugsnatchLocalizationConfig? {
+        return Bugsnatch.shared.config?.localization
+    }
+
     public static var appName: String? {
         return _bundle.infoDictionary?["CFBundleName"] as? String
     }
@@ -30,11 +34,19 @@ public struct ApplicationInfo {
     }
 
     public static var appInfo: String {
+        let applicationNameTitle = _localization?.applicationName
+            ?? "Application name"
+        let bundleIdTitle = _localization?.bundleId
+            ?? "Bundle ID"
+        let versionTitle = _localization?.version
+            ?? "Application name"
+        let buildNumberTitle = _localization?.buildNumber
+            ?? "Build number"
         return [
-            ApplicationInfo.appName.map { "Application name: \($0)" },
-            ApplicationInfo.bundleId.map { "Bundle ID: \($0)" },
-            ApplicationInfo.version.map { "Version: \($0)" },
-            ApplicationInfo.buildNumber.map { "Build number: \($0)" },
+            ApplicationInfo.appName.map { "\(applicationNameTitle): \($0)" },
+            ApplicationInfo.bundleId.map { "\(bundleIdTitle): \($0)" },
+            ApplicationInfo.version.map { "\(versionTitle): \($0)" },
+            ApplicationInfo.buildNumber.map { "\(buildNumberTitle): \($0)" },
         ]
             .compactMap { $0 }
             .joined(separator: "\n")

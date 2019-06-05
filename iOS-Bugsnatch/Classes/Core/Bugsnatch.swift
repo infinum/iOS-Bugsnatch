@@ -26,7 +26,8 @@ public final class Bugsnatch {
 
     public var bugTitle: String {
         guard let applicationName = ApplicationInfo.appName else { return "Bug report" }
-        return "\(applicationName) bug report"
+        let postfix = config?.localization.titlePostfix ?? "bug report"
+        return "\(applicationName) \(postfix)"
     }
 
     public var debugInfo: String {
@@ -43,15 +44,18 @@ public final class Bugsnatch {
     // MARK: - Private
 
     private var _deviceNameRow: String {
-        return "Device: \(Device.version.rawValue)"
+        let rowName = config?.localization.device ?? "Device"
+        return "\(rowName): \(Device.version.rawValue)"
     }
 
     private var _systemVersionRow: String {
-        return "OS: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
+        let rowName = config?.localization.os ?? "OS"
+        return "\(rowName): \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
     }
 
     private var _deviceOrientationRow: String {
-        return "Device orientation: \(_deviceOrientation)"
+        let rowName = config?.localization.orientation ?? "Device orientation"
+        return "\(rowName): \(_deviceOrientation)"
     }
 
     private var _deviceOrientation: String {
