@@ -1,0 +1,6 @@
+framework module Bugsnatch {
+  umbrella header "Bugsnatch-umbrella.h"
+
+  export *
+  module * { export * }
+}

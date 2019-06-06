@@ -1,21 +1,16 @@
 PODS:
-  - iOS-Bugsnatch/Core (0.1.0)
-  - iOS-Bugsnatch/Email (0.1.0):
-    - iOS-Bugsnatch/Core
-  - iOS-Bugsnatch/Productive (0.1.0):
-    - iOS-Bugsnatch/Core
+  - Bugsnatch (0.1.0)
 
 DEPENDENCIES:
-  - iOS-Bugsnatch/Email (from `../`)
-  - iOS-Bugsnatch/Productive (from `../`)
+  - Bugsnatch (from `../`)
 
 EXTERNAL SOURCES:
-  iOS-Bugsnatch:
+  Bugsnatch:
     :path: ../
 
 SPEC CHECKSUMS:
-  iOS-Bugsnatch: 23a4fcefc8926a4f653eebdce66c9fc806703db9
+  Bugsnatch: 3845067725a671d5dd7812b5ffa9f612f2fe9017
 
-PODFILE CHECKSUM: 84fc900572938cbcf5fbb089d8c165baeb7588ef
+PODFILE CHECKSUM: 5e8e6dcc11409d0e3d38ac4fe343d1601494a0ea
 
 COCOAPODS: 1.4.0
