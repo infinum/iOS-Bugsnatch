@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         let productiveConfig = ProductiveConfig(organizationId: "1-infinum", projectId: 1116)
         let bugsnatchConfig = BugsnatchConfig(
             trigger: ScreenshotTrigger(),
-            shouldShowDeviceOrientation: true,
-            triggerActionConfig: productiveConfig)
+            triggerActionConfig: productiveConfig,
+            shouldShowDeviceOrientation: true)
         Bugsnatch.shared.setup(config: bugsnatchConfig)
     }
 
