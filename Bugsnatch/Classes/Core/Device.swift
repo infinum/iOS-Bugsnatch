@@ -9,7 +9,7 @@ import UIKit
 
 open class Device {
 
-    public enum DeviceType: String {
+    public enum DeviceType: String { // TODO: - add description -
         case iPhone = "iPhone 4"
         case iPad = "iPad4"
         case iPod = "iPod"
@@ -17,7 +17,7 @@ open class Device {
         case unknown = "unknown"
     }
 
-    public enum Version: String {
+    public enum Version: String { // TODO: - add description -
         case iPhone4 = "iPhone 4"
         case iPhone4S = "iPhone 4S"
         case iPhone5 = "iPhone 5"
@@ -61,7 +61,7 @@ open class Device {
         case unknown = "unknown"
     }
 
-    public enum ScreenSize: String {
+    public enum ScreenSize: String { // TODO: - add description -
         case screen3_5Inch = "3.5 inch"
         case screen4Inch = "4 inch"
         case screen4_7Inch = "4.7 inch"
@@ -85,6 +85,7 @@ open class Device {
         return versionCode
     }
 
+    /// Returns the device version on which the application is running.
     static public var version: Version {
         switch _versionCode {
             /*** iPhone ***/
@@ -140,6 +141,7 @@ open class Device {
         }
     }
 
+    /// Returns the device type on which the application is running.
     static public var deviceType: DeviceType {
         let versionCode = _versionCode
 
@@ -156,6 +158,7 @@ open class Device {
         }
     }
 
+    /// Returns the screen size of the device on which the application is running.
     static public var size: ScreenSize {
         let w: Double = Double(UIScreen.main.bounds.width)
         let h: Double = Double(UIScreen.main.bounds.height)

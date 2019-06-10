@@ -34,17 +34,17 @@ TODO: Add long description of the pod here.
   s.default_subspec = 'Email'
 
   s.subspec 'Core' do |sp|
-      sp.source_files = 'iOS-Bugsnatch/Classes/Core/**/*'
+      sp.source_files = 'Bugsnatch/Classes/Core/**/*'
       sp.frameworks = 'Foundation'
   end
 
   s.subspec 'Email' do |sp|
-      sp.source_files = 'iOS-Bugsnatch/Classes/Email/**/*'
-      sp.dependency 'iOS-Bugsnatch/Core'
+      sp.source_files = 'Bugsnatch/Classes/Email/**/*'
+      sp.dependency 'Bugsnatch/Core'
   end
 
   s.subspec 'Productive' do |sp|
-      sp.source_files = 'iOS-Bugsnatch/Classes/Productive/**/*'
-      sp.dependency 'iOS-Bugsnatch/Core'
+      sp.source_files = 'Bugsnatch/Classes/Productive/**/*'
+      sp.dependency 'Bugsnatch/Core'
   end
 end

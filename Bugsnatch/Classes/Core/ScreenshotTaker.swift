@@ -9,11 +9,15 @@ import UIKit
 
 public class ScreenshotTaker {
 
+    /// Takes a screenshot and saves it to the device.
     public static func saveScreenshot() {
         guard let screenshotImage = takeScreenshot() else { return }
         UIImageWriteToSavedPhotosAlbum(screenshotImage, nil, nil, nil)
     }
 
+    /// Takes a screenshot of the screen.
+    ///
+    /// - Returns: Taken screenshot.
     public static func takeScreenshot() -> UIImage? {
         var screenshotImage: UIImage?
         guard let layer = UIApplication.shared.keyWindow?.layer else { return nil }
