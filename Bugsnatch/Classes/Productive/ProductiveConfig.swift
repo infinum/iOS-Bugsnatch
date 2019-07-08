@@ -7,8 +7,11 @@
 
 import Foundation
 
+/// Config used for configuring Productive trigger action. If this config is not configured correctly, Productive trigger action will not work properly.
 public struct ProductiveConfig: TriggerActionConfig {
+    /// Productive organization id which can be found in the URL of the Productive tool in the browser. If you are having problems with finding it, contact Productive support.
     let organizationId: String
+    /// Productive project id which can be found in the URL of the Productive tool in the browser. If you are having problems with finding it, contact Productive support.
     let projectId: Int
     let localization: ProductiveLocalizationConfig
 
@@ -19,6 +22,8 @@ public struct ProductiveConfig: TriggerActionConfig {
     }
 }
 
+/// Localization config for the Productive trigger action.
+/// This config can be modified when localizing text used in the Productive trigger action.
 public struct ProductiveLocalizationConfig {
 
     let closeButton: String

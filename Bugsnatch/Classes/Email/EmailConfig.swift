@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Config used for configuring Email trigger action. It consists only of localization config.
 public struct EmailConfig: TriggerActionConfig {
 
     var localization: EmailLocalizationConfig
@@ -16,6 +17,8 @@ public struct EmailConfig: TriggerActionConfig {
     }
 }
 
+/// Localization config for the Email trigger action.
+/// This config can be modified when localizing text used in the Email trigger action.
 public struct EmailLocalizationConfig {
 
     var mailServiceAlert: MailServiceAlertConfig

@@ -7,9 +7,11 @@
 
 import UIKit
 
+/// Class used for detecting device information.
 open class Device {
 
-    public enum DeviceType: String { // TODO: - add description -
+    /// Enum describing device types.
+    public enum DeviceType: String {
         case iPhone = "iPhone 4"
         case iPad = "iPad4"
         case iPod = "iPod"
@@ -17,7 +19,8 @@ open class Device {
         case unknown = "unknown"
     }
 
-    public enum Version: String { // TODO: - add description -
+    /// Enum describing device versions.
+    public enum DeviceVersion: String {
         case iPhone4 = "iPhone 4"
         case iPhone4S = "iPhone 4S"
         case iPhone5 = "iPhone 5"
@@ -61,7 +64,8 @@ open class Device {
         case unknown = "unknown"
     }
 
-    public enum ScreenSize: String { // TODO: - add description -
+    /// Enum describing screen size cases.
+    public enum ScreenSize: String {
         case screen3_5Inch = "3.5 inch"
         case screen4Inch = "4 inch"
         case screen4_7Inch = "4.7 inch"
@@ -86,7 +90,7 @@ open class Device {
     }
 
     /// Returns the device version on which the application is running.
-    static public var version: Version {
+    static public var version: DeviceVersion {
         switch _versionCode {
             /*** iPhone ***/
         case "iPhone3,1", "iPhone3,2", "iPhone3,3":     return .iPhone4

@@ -7,8 +7,10 @@
 
 import Foundation
 
+/// Used for configuring trigger actions.
 public protocol TriggerActionConfig {}
 
+/// A main Bugsnatch class. Use its singleton instance for setting setting up the Bugsnatch functionalities.
 public final class Bugsnatch {
 
     private init() {}
