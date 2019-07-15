@@ -17,6 +17,10 @@ public struct ApplicationInfo {
         return Bugsnatch.shared.config?.localization
     }
 
+    static private var _defaultLocalization: BugsnatchLocalizationConfig {
+        return BugsnatchLocalizationConfig()
+    }
+
     static private var _versionBuildNumber: String? {
         guard let versionBuildNumberDisplayType = Bugsnatch.shared.config?.versionBuildNumberDisplayType else { return nil }
 
@@ -30,9 +34,9 @@ public struct ApplicationInfo {
 
     static private var _versionBuildNumberSeparated: String? {
         let versionTitle = _localization?.version
-            ?? "Version"
+            ?? _defaultLocalization.version
         let buildNumberTitle = _localization?.buildNumber
-            ?? "Build number"
+            ?? _defaultLocalization.buildNumber
 
         return [
             ApplicationInfo.version.map { "\(versionTitle): \($0)" },
@@ -48,7 +52,7 @@ public struct ApplicationInfo {
             let buildNumber = ApplicationInfo.buildNumber
         else { return nil }
 
-        let versionBuildNumberTitle = _localization?.versionBuildNumber ?? "Version and build number"
+        let versionBuildNumberTitle = _localization?.versionBuildNumber ?? _defaultLocalization.versionBuildNumber
         return "\(versionBuildNumberTitle): \(version)-\(buildNumber)"
     }
 
@@ -84,9 +88,9 @@ public struct ApplicationInfo {
     ///
     public static var appInfo: String {
         let applicationNameTitle = _localization?.applicationName
-            ?? "Application name"
+            ?? _defaultLocalization.applicationName
         let bundleIdTitle = _localization?.bundleId
-            ?? "Bundle ID"
+            ?? _defaultLocalization.bundleId
 
         let applicationNameRow = ApplicationInfo.appName.map { "\(applicationNameTitle): \($0)" }
         let bundleIdRow = ApplicationInfo.bundleId.map { "\(bundleIdTitle): \($0)" }

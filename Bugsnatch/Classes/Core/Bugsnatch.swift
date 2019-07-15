@@ -65,18 +65,22 @@ public final class Bugsnatch {
 
     private var _trigger: Triggerable?
 
+    private var _defaultLocalization: BugsnatchLocalizationConfig {
+        return BugsnatchLocalizationConfig()
+    }
+
     private var _deviceNameRow: String {
-        let rowName = config?.localization.device ?? "Device"
+        let rowName = config?.localization.device ?? _defaultLocalization.device
         return "\(rowName): \(Device.version.rawValue)"
     }
 
     private var _systemVersionRow: String {
-        let rowName = config?.localization.os ?? "OS"
+        let rowName = config?.localization.os ?? _defaultLocalization.os
         return "\(rowName): \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
     }
 
     private var _deviceOrientationRow: String {
-        let rowName = config?.localization.orientation ?? "Device orientation"
+        let rowName = config?.localization.orientation ?? _defaultLocalization.orientation
         return "\(rowName): \(_deviceOrientation)"
     }
 
