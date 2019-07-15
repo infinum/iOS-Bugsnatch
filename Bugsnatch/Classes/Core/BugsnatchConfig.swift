@@ -12,24 +12,27 @@ public struct BugsnatchConfig {
     let trigger: Triggerable
     let triggerActionConfig: TriggerActionConfig?
     let localization: BugsnatchLocalizationConfig
+    let shouldShowBundleId: Bool
     let shouldShowDeviceOrientation: Bool
     let versionBuildNumberDisplayType: VersionBuildNumberDisplayType
-    var extraDebugInfo: String?
+    var extraDebugInfoDelegate: BugsnatchExtraDebugInfoDelegate?
 
     public init(
         trigger: Triggerable,
         triggerActionConfig: TriggerActionConfig? = nil,
         localization: BugsnatchLocalizationConfig = BugsnatchLocalizationConfig(),
+        shouldShowBundleId: Bool = false,
         shouldShowDeviceOrientation: Bool = false,
         versionBuildNumberDisplayType: VersionBuildNumberDisplayType = .separated,
-        extraDebugInfo: String? = nil
+        extraDebugInfoDelegate: BugsnatchExtraDebugInfoDelegate? = nil
     ) {
         self.trigger = trigger
+        self.shouldShowBundleId = shouldShowBundleId
         self.shouldShowDeviceOrientation = shouldShowDeviceOrientation
         self.triggerActionConfig = triggerActionConfig
         self.localization = localization
         self.versionBuildNumberDisplayType = versionBuildNumberDisplayType
-        self.extraDebugInfo = extraDebugInfo
+        self.extraDebugInfoDelegate = extraDebugInfoDelegate
     }
 }
 

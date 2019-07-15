@@ -54,7 +54,7 @@ public struct ApplicationInfo {
 
     /// Returns application name.
     public static var appName: String? {
-        return _bundle.infoDictionary?["CFBundleName"] as? String
+        return _bundle.infoDictionary?["CFBundleDisplayName"] as? String ?? _bundle.infoDictionary?["CFBundleName"] as? String
     }
 
     /// Returns bundle ID.
@@ -88,9 +88,12 @@ public struct ApplicationInfo {
         let bundleIdTitle = _localization?.bundleId
             ?? "Bundle ID"
 
+        let applicationNameRow = ApplicationInfo.appName.map { "\(applicationNameTitle): \($0)" }
+        let bundleIdRow = ApplicationInfo.bundleId.map { "\(bundleIdTitle): \($0)" }
+
         return [
-            ApplicationInfo.appName.map { "\(applicationNameTitle): \($0)" },
-            ApplicationInfo.bundleId.map { "\(bundleIdTitle): \($0)" },
+            applicationNameRow,
+            Bugsnatch.shared.config?.shouldShowBundleId.mapTrue(to: bundleIdRow),
             _versionBuildNumber
         ]
             .compactMap { $0 }

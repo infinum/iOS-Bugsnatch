@@ -9,7 +9,7 @@ import Foundation
 
 extension Bool {
 
-    func mapTrue<T>(to object: T) -> T? {
+    func mapTrue<T>(to object: T?) -> T? {
         return self ? object : nil
     }
 }
