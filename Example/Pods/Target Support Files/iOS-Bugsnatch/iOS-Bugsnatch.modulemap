@@ -1,6 +1,0 @@
-framework module iOS_Bugsnatch {
-  umbrella header "iOS-Bugsnatch-umbrella.h"
-
-  export *
-  module * { export * }
-}

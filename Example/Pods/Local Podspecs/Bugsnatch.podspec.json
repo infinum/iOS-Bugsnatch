@@ -1,0 +1,22 @@
+{
+  "name": "Bugsnatch",
+  "version": "0.1.0",
+  "summary": "A short description of Bugsnatch.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Damjan Dabo/Bugsnatch",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Damjan Dabo": "damjan.dabo@infinum.hr"
+  },
+  "source": {
+    "git": "https://github.com/Damjan Dabo/Bugsnatch.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Bugsnatch/Classes/**/*"
+}
