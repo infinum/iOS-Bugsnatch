@@ -13,17 +13,36 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-Bugsnatch is available through [CocoaPods](https://cocoapods.org). To install
+Bugsnatch is available through [CocoaPods][1]. To install
 it, simply add the following line to your Podfile:
 
+* for Email version
 ```ruby
-pod 'Bugsnatch'
+pod 'Bugsnatch/Email'
+```
+
+* for Productive version
+```ruby
+pod 'Bugsnatch/Productive'
 ```
 
 ## Author
 
 Damjan Dabo, damjan.dabo@infinum.hr
 
+Maintained by [Infinum][2]
+
+<p align="center">
+    <img src="infinum-logo.png" width="300" max-width="70%" alt="Infinum"/>
+</p>
+
 ## License
 
 Bugsnatch is available under the MIT license. See the LICENSE file for more info.
+
+* Copyright (c) 2019 Zagreb University of Applied Sciences (TVZ)
+* Copyright (c) 2019 Damjan Dabo
+* Copyright (c) 2019 Infinum
+
+[1]:    http://cocoapods.org
+[2]:    https://infinum.co
