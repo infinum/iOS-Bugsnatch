@@ -7,6 +7,8 @@
 
 Bugsnatch is a lightweight bug reporting iOS library written in Swift. It creates a bug report template by collecting application and device information. It can be triggered via a shake gesture or by taking a screenshot.
 
+It supports reporting bugs via an email or via the [Productive][1] tool.
+
 ### Features:
 - collecting application and device information
 - attaching a screenshot to the email
@@ -18,8 +20,56 @@ Bugsnatch is a lightweight bug reporting iOS library written in Swift. It create
     - selecting shake gesture or taking a screenshot for the trigger
     - adding a custom trigger
     - dynamically adding extra debug info
+    
+## Setting up
 
-## Example
+### For the Email version
+
+Configure in `AppDelegate`:
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+    let bugsnatchConfig = BugsnatchConfig(
+        trigger: ScreenshotTrigger(),
+        triggerActionConfig: EmailConfig(),
+        extraDebugInfoDelegate: self)
+    Bugsnatch.shared.setup(config: bugsnatchConfig)
+
+    return true
+}
+```
+
+supporting extra debug info:
+```swift 
+extension AppDelegate: BugsnatchExtraDebugInfoDelegate {
+
+    var extraDebugInfo: String? {
+        return Date().debugDescription // example dynamic info
+    }
+}
+```
+
+### For the Productive version
+
+Configure in `AppDelegate`:
+```swift 
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+    // can be found in Productive URL, e.g. https://app.productive.io/someOrganizationName/projects/12345
+    let organizationName = "someOrganizationName"
+    let projectId = 12345
+
+    let productiveConfig = ProductiveConfig(organizationId: organizationName, projectId: projectId)
+    let bugsnatchConfig = BugsnatchConfig(
+        trigger: ScreenshotTrigger(),
+        triggerActionConfig: productiveConfig)
+    Bugsnatch.shared.setup(config: bugsnatchConfig)
+
+    return true
+}
+```
+
+## Example project
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first. Example project is configured for the Email version.
 
@@ -31,15 +81,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-Bugsnatch is available through [CocoaPods][1]. To install
+Bugsnatch is available through [CocoaPods][2]. To install
 it, simply add the following line to your Podfile:
 
-* for Email version
+* for the Email version
 ```ruby
 pod 'Bugsnatch/Email'
 ```
 
-* for Productive version
+* for the Productive version
 ```ruby
 pod 'Bugsnatch/Productive'
 ```
@@ -48,7 +98,7 @@ pod 'Bugsnatch/Productive'
 
 Damjan Dabo, damjan.dabo@infinum.hr
 
-Maintained by [Infinum][2]
+Maintained by [Infinum][3]
 
 <p align="center">
     <img src="infinum-logo.png" width="300" max-width="70%" alt="Infinum"/>
@@ -62,5 +112,6 @@ Bugsnatch is available under the MIT license. See the LICENSE file for more info
 * Copyright (c) 2019 Damjan Dabo
 * Copyright (c) 2019 Infinum
 
-[1]:    http://cocoapods.org
-[2]:    https://infinum.co
+[1]:    https://www.productive.io
+[2]:    http://cocoapods.org
+[3]:    https://infinum.co
