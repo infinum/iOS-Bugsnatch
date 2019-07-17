@@ -14,7 +14,8 @@
 		6D4DAA8E9C2109F03AEE554A292A4D7F /* Pods-Bugsnatch_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BDB633A4A7D22D090C69998F497F87B /* Pods-Bugsnatch_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DD2985B8F154E5A8CE39AACF7B2444B /* Bugsnatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38E5033AEDA54E17C476B09AA51AA0 /* Bugsnatch-dummy.m */; };
 		AD24874E22AE683700C09799 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24874D22AE683700C09799 /* Bugsnatch+Extension.swift */; };
-		ADB1D78C22DCB6460063E317 /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1D78B22DCB6460063E317 /* Bugsnatch+Extension.swift */; };
+		ADCB600922DF07D6001A4F4C /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCB600822DF07D6001A4F4C /* Bundle+extension.swift */; };
+		ADCB600B22DF10A5001A4F4C /* Bugsnatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCB600A22DF10A5001A4F4C /* Bugsnatch+Extension.swift */; };
 		ADF258B722A92656009BDA0E /* productiveScript.js in Resources */ = {isa = PBXBuildFile; fileRef = ADF258A422A92656009BDA0E /* productiveScript.js */; };
 		ADF258B822A92656009BDA0E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF258A522A92656009BDA0E /* UIView+Extension.swift */; };
 		ADF258BA22A92656009BDA0E /* ProductiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF258A722A92656009BDA0E /* ProductiveViewController.swift */; };
@@ -68,7 +69,8 @@
 		A44774E9EE741E37BE91843EEF5C0D98 /* Pods-Bugsnatch_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bugsnatch_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		ACF5D00B699B5FF42224C19BD8B5C2B2 /* Pods-Bugsnatch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bugsnatch_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		AD24874D22AE683700C09799 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
-		ADB1D78B22DCB6460063E317 /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
+		ADCB600822DF07D6001A4F4C /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
+		ADCB600A22DF10A5001A4F4C /* Bugsnatch+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugsnatch+Extension.swift"; sourceTree = "<group>"; };
 		ADF258A422A92656009BDA0E /* productiveScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = productiveScript.js; sourceTree = "<group>"; };
 		ADF258A522A92656009BDA0E /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		ADF258A722A92656009BDA0E /* ProductiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductiveViewController.swift; sourceTree = "<group>"; };
@@ -205,7 +207,7 @@
 		ADF258A322A92656009BDA0E /* Productive */ = {
 			isa = PBXGroup;
 			children = (
-				ADB1D78B22DCB6460063E317 /* Bugsnatch+Extension.swift */,
+				ADCB600A22DF10A5001A4F4C /* Bugsnatch+Extension.swift */,
 				ADF258A422A92656009BDA0E /* productiveScript.js */,
 				ADF258A522A92656009BDA0E /* UIView+Extension.swift */,
 				ADF258A722A92656009BDA0E /* ProductiveViewController.swift */,
@@ -235,6 +237,7 @@
 			children = (
 				ADF258AF22A92656009BDA0E /* UIViewController+Extension.swift */,
 				ADF258B022A92656009BDA0E /* Bool+Extension.swift */,
+				ADCB600822DF07D6001A4F4C /* Bundle+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -458,14 +461,15 @@
 				ADF258C222A92656009BDA0E /* Bugsnatch.swift in Sources */,
 				ADF258C122A92656009BDA0E /* Bool+Extension.swift in Sources */,
 				ADF258BA22A92656009BDA0E /* ProductiveViewController.swift in Sources */,
+				ADCB600B22DF10A5001A4F4C /* Bugsnatch+Extension.swift in Sources */,
 				7DD2985B8F154E5A8CE39AACF7B2444B /* Bugsnatch-dummy.m in Sources */,
 				ADF258BE22A92656009BDA0E /* Trigger.swift in Sources */,
 				ADF258C422A92656009BDA0E /* EmailManager.swift in Sources */,
 				ADF258BB22A92656009BDA0E /* ProductiveConfig.swift in Sources */,
 				AD24874E22AE683700C09799 /* Bugsnatch+Extension.swift in Sources */,
-				ADB1D78C22DCB6460063E317 /* Bugsnatch+Extension.swift in Sources */,
 				ADF258BF22A92656009BDA0E /* ScreenshotTaker.swift in Sources */,
 				ADF258BC22A92656009BDA0E /* BugsnatchConfig.swift in Sources */,
+				ADCB600922DF07D6001A4F4C /* Bundle+extension.swift in Sources */,
 				ADF258C022A92656009BDA0E /* UIViewController+Extension.swift in Sources */,
 				ADF258BD22A92656009BDA0E /* ApplicationInfo.swift in Sources */,
 			);

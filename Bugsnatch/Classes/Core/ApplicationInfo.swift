@@ -58,22 +58,22 @@ public struct ApplicationInfo {
 
     /// Returns application name.
     public static var appName: String? {
-        return _bundle.infoDictionary?["CFBundleDisplayName"] as? String ?? _bundle.infoDictionary?["CFBundleName"] as? String
+        return _bundle.displayName ?? _bundle.name
     }
 
     /// Returns bundle ID.
     public static var bundleId: String? {
-        return _bundle.bundleIdentifier ?? nil
+        return _bundle.bundleId
     }
 
     /// Returns application version.
     public static var version: String? {
-        return _bundle.infoDictionary?["CFBundleShortVersionString"] as? String
+        return _bundle.version
     }
 
     /// Returns application build number.
     public static var buildNumber: String? {
-        return _bundle.infoDictionary?["CFBundleVersion"] as? String
+        return _bundle.buildNumber
     }
 
     /// Returns application name, bundle ID, application version and build number with descriptive titles separated by a new line.
