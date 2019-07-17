@@ -25,7 +25,7 @@ It supports reporting bugs via an email or via the [Productive][1] tool.
 
 ### For the Email version
 
-Configure in `AppDelegate`:
+- Configure in `AppDelegate`:
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -39,7 +39,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-supporting extra debug info:
+- Supporting extra debug info:
 ```swift 
 extension AppDelegate: BugsnatchExtraDebugInfoDelegate {
 
@@ -49,9 +49,13 @@ extension AppDelegate: BugsnatchExtraDebugInfoDelegate {
 }
 ```
 
+- On iPhone, the native Mail app should be installed and an account linked.
+- If using Gmail: on iPhone go to `Settings` -> `Passwords & Accounts` -> `Gmail` and enable Mail.
+- Removing "Sent from my iPhone" signature: on iPhone go to `Settings` -> `Mail` -> scroll down -> `Signature` and delete text.
+
 ### For the Productive version
 
-Configure in `AppDelegate`:
+- Configure in `AppDelegate`:
 ```swift 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -68,6 +72,13 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     return true
 }
 ```
+
+- Add `productiveScript.js` in `Build Phases` -> `Copy Bundle Resources` and remove it from `Compile Sources`.
+- Add `NSCameraUsageDescription` to `Info.plist` so app wouldn't crash when trying to attach a new photo to the Productive task in WebView.
+
+### Extra setup
+
+- When using `ShakeGestureTrigger`, add `NSPhotoLibraryAddUsageDescription`to `Info.plist` for saving a screenshot on the device.
 
 ## Example project
 
