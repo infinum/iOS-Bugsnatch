@@ -5,9 +5,23 @@
 [![License](https://img.shields.io/cocoapods/l/Bugsnatch.svg?style=flat)](https://cocoapods.org/pods/Bugsnatch)
 [![Platform](https://img.shields.io/cocoapods/p/Bugsnatch.svg?style=flat)](https://cocoapods.org/pods/Bugsnatch)
 
+Bugsnatch is a lightweight bug reporting iOS library written in Swift. It creates a bug report template by collecting application and device information. It can be triggered via a shake gesture or by taking a screenshot.
+
+### Features:
+- collecting application and device information
+- attaching a screenshot to the email
+- comes in two variations: 
+    - Email 
+    - Productive
+- fully configurable:
+    - strings customization
+    - selecting shake gesture or taking a screenshot for the trigger
+    - adding a custom trigger
+    - dynamically adding extra debug info
+
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first. Example project is configured for the Email version.
 
 ## Requirements
 
