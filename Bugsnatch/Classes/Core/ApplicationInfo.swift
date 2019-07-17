@@ -17,6 +17,10 @@ public struct ApplicationInfo {
         return Bugsnatch.shared.config?.localization
     }
 
+    static private var _defaultLocalization: BugsnatchLocalizationConfig {
+        return BugsnatchLocalizationConfig()
+    }
+
     static private var _versionBuildNumber: String? {
         guard let versionBuildNumberDisplayType = Bugsnatch.shared.config?.versionBuildNumberDisplayType else { return nil }
 
@@ -30,9 +34,9 @@ public struct ApplicationInfo {
 
     static private var _versionBuildNumberSeparated: String? {
         let versionTitle = _localization?.version
-            ?? "Version"
+            ?? _defaultLocalization.version
         let buildNumberTitle = _localization?.buildNumber
-            ?? "Build number"
+            ?? _defaultLocalization.buildNumber
 
         return [
             ApplicationInfo.version.map { "\(versionTitle): \($0)" },
@@ -48,28 +52,28 @@ public struct ApplicationInfo {
             let buildNumber = ApplicationInfo.buildNumber
         else { return nil }
 
-        let versionBuildNumberTitle = _localization?.versionBuildNumber ?? "Version and build number"
+        let versionBuildNumberTitle = _localization?.versionBuildNumber ?? _defaultLocalization.versionBuildNumber
         return "\(versionBuildNumberTitle): \(version)-\(buildNumber)"
     }
 
     /// Returns application name.
     public static var appName: String? {
-        return _bundle.infoDictionary?["CFBundleName"] as? String
+        return _bundle.displayName ?? _bundle.name
     }
 
     /// Returns bundle ID.
     public static var bundleId: String? {
-        return _bundle.bundleIdentifier ?? nil
+        return _bundle.bundleId
     }
 
     /// Returns application version.
     public static var version: String? {
-        return _bundle.infoDictionary?["CFBundleShortVersionString"] as? String
+        return _bundle.version
     }
 
     /// Returns application build number.
     public static var buildNumber: String? {
-        return _bundle.infoDictionary?["CFBundleVersion"] as? String
+        return _bundle.buildNumber
     }
 
     /// Returns application name, bundle ID, application version and build number with descriptive titles separated by a new line.
@@ -84,13 +88,16 @@ public struct ApplicationInfo {
     ///
     public static var appInfo: String {
         let applicationNameTitle = _localization?.applicationName
-            ?? "Application name"
+            ?? _defaultLocalization.applicationName
         let bundleIdTitle = _localization?.bundleId
-            ?? "Bundle ID"
+            ?? _defaultLocalization.bundleId
+
+        let applicationNameRow = ApplicationInfo.appName.map { "\(applicationNameTitle): \($0)" }
+        let bundleIdRow = ApplicationInfo.bundleId.map { "\(bundleIdTitle): \($0)" }
 
         return [
-            ApplicationInfo.appName.map { "\(applicationNameTitle): \($0)" },
-            ApplicationInfo.bundleId.map { "\(bundleIdTitle): \($0)" },
+            applicationNameRow,
+            Bugsnatch.shared.config?.shouldShowBundleId.mapTrue(to: bundleIdRow),
             _versionBuildNumber
         ]
             .compactMap { $0 }

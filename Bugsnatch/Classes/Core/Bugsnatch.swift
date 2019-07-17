@@ -10,6 +10,12 @@ import Foundation
 /// Used for configuring trigger actions.
 public protocol TriggerActionConfig {}
 
+/// Used for adding extra debug info.
+public protocol BugsnatchExtraDebugInfoDelegate {
+    /// Implement this computed property for adding extra debug info.
+    var extraDebugInfo: String? { get }
+}
+
 /// A main Bugsnatch class. Use its singleton instance for setting setting up the Bugsnatch functionalities.
 public final class Bugsnatch {
 
@@ -34,7 +40,7 @@ public final class Bugsnatch {
     ///
     /// Example:
     ///
-    ///     Application name: Bugsnatch_Example
+    ///     Application name: Bugsnatch Example
     ///     Bundle ID: org.cocoapods.demo.Bugsnatch-Example
     ///     Version: 1.0
     ///     Build number: 1
@@ -49,7 +55,7 @@ public final class Bugsnatch {
             _deviceNameRow,
             _systemVersionRow,
             config?.shouldShowDeviceOrientation.mapTrue(to: _deviceOrientationRow),
-            config?.extraDebugInfo
+            config?.extraDebugInfoDelegate?.extraDebugInfo
         ]
             .compactMap { $0 }
             .joined(separator: "\n")
@@ -59,18 +65,22 @@ public final class Bugsnatch {
 
     private var _trigger: Triggerable?
 
+    private var _defaultLocalization: BugsnatchLocalizationConfig {
+        return BugsnatchLocalizationConfig()
+    }
+
     private var _deviceNameRow: String {
-        let rowName = config?.localization.device ?? "Device"
+        let rowName = config?.localization.device ?? _defaultLocalization.device
         return "\(rowName): \(Device.version.rawValue)"
     }
 
     private var _systemVersionRow: String {
-        let rowName = config?.localization.os ?? "OS"
+        let rowName = config?.localization.os ?? _defaultLocalization.os
         return "\(rowName): \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
     }
 
     private var _deviceOrientationRow: String {
-        let rowName = config?.localization.orientation ?? "Device orientation"
+        let rowName = config?.localization.orientation ?? _defaultLocalization.orientation
         return "\(rowName): \(_deviceOrientation)"
     }
 
@@ -100,15 +110,5 @@ public final class Bugsnatch {
         self.config = config
         _trigger = config.trigger
         _trigger?.delegate = self
-    }
-
-    /// Adds extra debug information for BugsnatchConfig.
-    ///
-    /// Can be used for adding some extra debug info specific for the application. Must be called after setting up BugsnatchConfig.
-    /// Example of some extra info could be: is the user guest or logged in user.
-    ///
-    /// - Parameter extraDebugInfo: Represents some extra information which could be helpful for debugging.
-    public func updateExtraDebugInfo(with extraDebugInfo: String) {
-        config?.extraDebugInfo = extraDebugInfo
     }
 }

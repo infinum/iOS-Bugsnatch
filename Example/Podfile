@@ -1,13 +1,10 @@
 use_frameworks!
 
 target 'Bugsnatch_Example' do
-  pod 'Bugsnatch', :path => '../'
-  pod 'Bugsnatch/Email', :path => '../'
-  pod 'Bugsnatch/Productive', :path => '../'
+    pod 'Bugsnatch/Email', :path => '../'
 
-  target 'Bugsnatch_Tests' do
-    inherit! :search_paths
+    target 'Bugsnatch_Tests' do
+        inherit! :search_paths
 
-    
-  end
+    end
 end

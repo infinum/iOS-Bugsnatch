@@ -7,18 +7,11 @@
 //
 
 import UIKit
-import Bugsnatch
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let productiveConfig = ProductiveConfig(organizationId: "1-infinum", projectId: 1116)
-        let bugsnatchConfig = BugsnatchConfig(
-            trigger: ScreenshotTrigger(),
-            triggerActionConfig: productiveConfig,
-            shouldShowDeviceOrientation: true)
-        Bugsnatch.shared.setup(config: bugsnatchConfig)
     }
 
     override var preferredStatusBarStyle : UIStatusBarStyle {
