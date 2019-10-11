@@ -51,7 +51,6 @@ extension AppDelegate: BugsnatchExtraDebugInfoDelegate {
 
 - On iPhone, the native Mail app should be installed and an account linked.
 - If using Gmail: on iPhone go to `Settings` -> `Passwords & Accounts` -> `Gmail` and enable Mail.
-- Removing "Sent from my iPhone" signature: on iPhone go to `Settings` -> `Mail` -> scroll down -> `Signature` and delete text.
 
 ### For the Productive version
 
