@@ -1,6 +1,8 @@
 # Bugsnatch
 
-[![CI Status](https://img.shields.io/travis/Damjan Dabo/Bugsnatch.svg?style=flat)](https://travis-ci.org/Damjan Dabo/Bugsnatch)
+![iOS Version](https://img.shields.io/badge/iOS-9.0%2B-lightgrey)
+![Xcode Version](https://img.shields.io/badge/Xcode-10.2%2B-blue)
+![Swift Version](https://img.shields.io/badge/Swift-5.0%2B-orange)
 [![Version](https://img.shields.io/cocoapods/v/Bugsnatch.svg?style=flat)](https://cocoapods.org/pods/Bugsnatch)
 [![License](https://img.shields.io/cocoapods/l/Bugsnatch.svg?style=flat)](https://cocoapods.org/pods/Bugsnatch)
 [![Platform](https://img.shields.io/cocoapods/p/Bugsnatch.svg?style=flat)](https://cocoapods.org/pods/Bugsnatch)
