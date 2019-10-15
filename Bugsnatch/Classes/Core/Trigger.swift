@@ -15,6 +15,13 @@ public protocol TriggerDelegate: class {
     func didTrigger()
 }
 
+public extension TriggerDelegate {
+
+    func didTrigger() {
+        preconditionFailure()
+    }
+}
+
 /// When making a trigger, it should conform to this protocol.
 public protocol Triggerable {
     var delegate: TriggerDelegate? { get set }

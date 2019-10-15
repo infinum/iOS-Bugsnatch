@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Bugsnatch: TriggerDelegate {
+extension Bugsnatch {
 
     public func didTrigger() {
         guard let emailConfig = config?.triggerActionConfig as? EmailConfig else { return }

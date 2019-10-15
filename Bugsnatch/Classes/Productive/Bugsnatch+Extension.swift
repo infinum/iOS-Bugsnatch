@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Bugsnatch: TriggerDelegate {
+extension Bugsnatch {
 
     public func didTrigger() {
         ProductiveViewController.present(with: config?.triggerActionConfig)
