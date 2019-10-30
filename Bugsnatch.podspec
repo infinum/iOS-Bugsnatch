@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Damjan Dabo' => 'damjan.dabo@infinum.hr' }
-  s.source           = { :git => 'https://github.com/infinum/iOS-Bugsnatch.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/infinum/iOS-Bugsnatch.git' }
 
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
