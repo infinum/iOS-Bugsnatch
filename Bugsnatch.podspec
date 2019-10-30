@@ -33,6 +33,10 @@ TODO: Add long description of the pod here.
   s.module_name = 'Bugsnatch'
   s.default_subspec = 'Email'
 
+  s.resources = [
+    'Bugsnatch/Classes/Productive/productiveScript.js'
+  ]
+
   s.subspec 'Core' do |sp|
       sp.source_files = 'Bugsnatch/Classes/Core/**/*'
       sp.frameworks = 'Foundation'
