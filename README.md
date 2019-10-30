@@ -74,7 +74,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-- Add `productiveScript.js` in `Build Phases` -> `Copy Bundle Resources` and remove it from `Compile Sources`.
 - Add `NSCameraUsageDescription` to `Info.plist` so app wouldn't crash when trying to attach a new photo to the Productive task in WebView.
 
 ### Adding a custom trigger
