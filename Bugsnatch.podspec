@@ -46,5 +46,8 @@ TODO: Add long description of the pod here.
   s.subspec 'Productive' do |sp|
       sp.source_files = 'Bugsnatch/Classes/Productive/**/*'
       sp.dependency 'Bugsnatch/Core'
+      sp.resources = [
+        'Bugsnatch/Classes/**/*.{js}'
+      ]
   end
 end
