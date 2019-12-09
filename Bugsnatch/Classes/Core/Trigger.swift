@@ -15,6 +15,13 @@ public protocol TriggerDelegate: class {
     func didTrigger()
 }
 
+public extension TriggerDelegate {
+
+    func didTrigger() {
+        preconditionFailure()
+    }
+}
+
 /// When making a trigger, it should conform to this protocol.
 public protocol Triggerable {
     var delegate: TriggerDelegate? { get set }
@@ -98,6 +105,8 @@ class ShakeGestureObserver {
 extension UIWindow {
 
     open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        super.motionEnded(motion, with: event)
+
         if motion == .motionShake {
             ShakeGestureObserver.shared.shakeGestureDetected()
         }

@@ -17,7 +17,7 @@ public protocol BugsnatchExtraDebugInfoDelegate {
 }
 
 /// A main Bugsnatch class. Use its singleton instance for setting setting up the Bugsnatch functionalities.
-public final class Bugsnatch {
+public final class Bugsnatch: TriggerDelegate {
 
     private init() {}
 
@@ -96,6 +96,8 @@ public final class Bugsnatch {
             return "landscapeLeft"
         case .landscapeRight:
             return "landscapeRight"
+        @unknown default:
+            return "unknown"
         }
     }
 
