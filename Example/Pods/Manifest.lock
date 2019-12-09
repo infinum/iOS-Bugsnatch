@@ -1,16 +1,23 @@
 PODS:
-  - Bugsnatch (0.1.0)
+  - Bugsnatch/Core (0.1.0)
+  - Bugsnatch/Email (0.1.0):
+    - Bugsnatch/Core
 
 DEPENDENCIES:
-  - Bugsnatch (from `../`)
+  - "Bugsnatch/Email (from `git@github.com:infinum/iOS-Bugsnatch.git`)"
 
 EXTERNAL SOURCES:
   Bugsnatch:
-    :path: ../
+    :git: "git@github.com:infinum/iOS-Bugsnatch.git"
+
+CHECKOUT OPTIONS:
+  Bugsnatch:
+    :commit: f982cc3ce02c57f8340ecf3bdce1971f8275bcca
+    :git: "git@github.com:infinum/iOS-Bugsnatch.git"
 
 SPEC CHECKSUMS:
-  Bugsnatch: 3845067725a671d5dd7812b5ffa9f612f2fe9017
+  Bugsnatch: 1a3217eed58380625ccc4bcb42978b09fe89e31b
 
-PODFILE CHECKSUM: 5e8e6dcc11409d0e3d38ac4fe343d1601494a0ea
+PODFILE CHECKSUM: bc9c035b29e1715fd701cf455307cd547a726eae
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.8.3

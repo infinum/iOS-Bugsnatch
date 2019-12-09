@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of Bugsnatch.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Damjan Dabo/Bugsnatch",
+  "homepage": "https://github.com/infinum/iOS-Bugsnatch",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,42 @@
     "Damjan Dabo": "damjan.dabo@infinum.hr"
   },
   "source": {
-    "git": "https://github.com/Damjan Dabo/Bugsnatch.git",
+    "git": "https://github.com/infinum/iOS-Bugsnatch.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "Bugsnatch/Classes/**/*"
+  "swift_versions": "5.0",
+  "module_name": "Bugsnatch",
+  "default_subspecs": "Email",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Bugsnatch/Classes/Core/**/*",
+      "frameworks": "Foundation"
+    },
+    {
+      "name": "Email",
+      "source_files": "Bugsnatch/Classes/Email/**/*",
+      "dependencies": {
+        "Bugsnatch/Core": [
+
+        ]
+      }
+    },
+    {
+      "name": "Productive",
+      "source_files": "Bugsnatch/Classes/Productive/**/*",
+      "dependencies": {
+        "Bugsnatch/Core": [
+
+        ]
+      },
+      "resources": [
+        "Bugsnatch/Classes/**/*.{js}"
+      ]
+    }
+  ],
+  "swift_version": "5.0"
 }
