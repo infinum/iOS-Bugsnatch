@@ -171,7 +171,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				87CE362D6BFBBC4699820830 /* [CP] Embed Pods Frameworks */,
-				769D6F2BCAC32A230568CB36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,8 +189,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				216E715CE50049D487820EAF /* [CP] Embed Pods Frameworks */,
-				48673EA07F405CAAFD67D1F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,83 +264,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		216E715CE50049D487820EAF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bugsnatch_Tests/Pods-Bugsnatch_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		48673EA07F405CAAFD67D1F6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bugsnatch_Tests/Pods-Bugsnatch_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		769D6F2BCAC32A230568CB36 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bugsnatch_Example/Pods-Bugsnatch_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		87CE362D6BFBBC4699820830 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Bugsnatch_Example/Pods-Bugsnatch_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Bugsnatch_Example/Pods-Bugsnatch_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bugsnatch/Bugsnatch.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bugsnatch.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bugsnatch_Example/Pods-Bugsnatch_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bugsnatch_Example/Pods-Bugsnatch_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B3958093468F6A904720B540 /* [CP] Check Pods Manifest.lock */ = {

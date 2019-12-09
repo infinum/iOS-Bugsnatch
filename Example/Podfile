@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'Bugsnatch_Example' do
-    pod 'Bugsnatch/Email', :path => '../'
+    pod 'Bugsnatch/Email', :git => 'git@github.com:infinum/iOS-Bugsnatch.git'
 
     target 'Bugsnatch_Tests' do
         inherit! :search_paths
