@@ -7,6 +7,10 @@
 [![License](https://img.shields.io/cocoapods/l/Bugsnatch.svg?style=flat)](https://cocoapods.org/pods/Bugsnatch)
 [![Platform](https://img.shields.io/cocoapods/p/Bugsnatch.svg?style=flat)](https://cocoapods.org/pods/Bugsnatch)
 
+<p align="center">
+    <img src="bugsnatch_logo.png" width="300" max-width="50%" alt="Bugsnatch"/>
+</p>
+
 Bugsnatch is a lightweight bug reporting iOS library written in Swift. It creates a bug report template by collecting application and device information. It can be triggered via a shake gesture or by taking a screenshot.
 
 It supports reporting bugs via an email or via the [Productive][1] tool.
